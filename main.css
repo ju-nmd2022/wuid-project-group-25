@@ -1,0 +1,234 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: 2.25rem 1fr 2.25rem;
+  grid-template-areas:
+    "header header header"
+    ". content ."
+    "footer footer footer";
+  min-height: 100vh;
+}
+
+/*#region header + nav bar*/
+
+.header {
+  grid-area: header;
+}
+
+.topnav {
+  background-color: #ffffff;
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  margin: 0;
+  flex-direction: row;
+  justify-content: end;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+.topnav a.active {
+  color: #50c878;
+  font-size: 1rem;
+}
+
+.topnav a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  list-style: none;
+}
+
+.topnav a:hover {
+  text-decoration: underline;
+}
+
+.chevron {
+  width: 0.8rem;
+}
+
+.shoppingCart img {
+  width: 1.4rem;
+}
+
+.hamburgerMenu img {
+  display: none;
+  width: 1.4rem;
+}
+
+ul {
+  flex-direction: row;
+  display: flex;
+  align-self: flex-end;
+  padding: 0;
+  margin-right: 2rem;
+}
+
+li {
+  text-align: center;
+  align-self: center;
+  list-style: none;
+  width: 8rem;
+}
+
+input,
+button {
+  background: none;
+  border: none;
+}
+
+input {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  width: 10rem;
+  color: #999999;
+}
+
+input:focus {
+  outline: none;
+  color: #000000;
+}
+
+#search:focus-within {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+#search {
+  display: inline-flex;
+  flex-direction: row;
+  width: 13rem;
+  background-color: #f8f8f8;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+button {
+  width: 2rem;
+  box-sizing: border-box;
+}
+
+button img {
+  box-sizing: border-box;
+  width: 2rem;
+  padding: 0 0.5rem;
+}
+
+/*#endregion*/
+
+.content {
+  grid-area: content;
+  width: 100%;
+}
+
+/*#region style meal cards*/
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 3rem;
+  margin-top: 4rem;
+}
+
+.swedishBreakfast {
+  position: relative;
+  width: 22rem;
+  height: 24rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  margin: 0 2.25rem;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.swedishBreakfast img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  width: 22rem;
+}
+
+.swedishBreakfast h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: #000000;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.description {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  color: #000000;
+  margin-top: 0.5rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.time img {
+  width: 1.4rem;
+}
+
+.timeToCook {
+  display: inline;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  color: #bababa;
+  padding: 0 0.5rem;
+}
+
+.time {
+  position: absolute;
+  display: inline-flex;
+  flex-direction: row;
+  width: 8rem;
+  bottom: 0;
+  left: 0.75rem;
+}
+
+.reviews img {
+  display: inline;
+  width: 1.4rem;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.reviews {
+  display: inline-flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+}
+
+/*#endregion*/
+
+.footer {
+  grid-area: footer;
+}
+
+/* Intended for the responsiveness of the website /*
+
+/* @media screen and (min-width: xxpx) {
+    
+} */
+
+/* @media screen and (min-width: xxpx) and (max-width: yypx) {
+    
+} */
+
+@media screen and (max-width: 500px) {
+  .hamburgerMenu {
+    display: block;
+  }
+}
