@@ -10,6 +10,7 @@ let meal = {
   timeToCook: "Time in hours and minutes",
   price: "Price, integer without quotiation marks",
   hidden: false,
+  html: "",
 };
 
 let meal2 = {
@@ -21,6 +22,7 @@ let meal2 = {
   timeToCook: "Time in hours and minutes",
   price: "Price, integer without quotiation marks",
   hidden: false,
+  html: "",
 };
 
 let meal3 = {
@@ -33,6 +35,7 @@ let meal3 = {
   timeToCook: "15 min",
   price: 60,
   hidden: false,
+  html: "",
 };
 
 let meal4 = {
@@ -44,6 +47,7 @@ let meal4 = {
   timeToCook: "Time in hours and minutes",
   price: "Price, integer without quotiation marks",
   hidden: false,
+  html: "",
 };
 
 let meal5 = {
@@ -55,6 +59,7 @@ let meal5 = {
   timeToCook: "Time in hours and minutes",
   price: "Price, integer without quotiation marks",
   hidden: false,
+  html: "",
 };
 
 let meal6 = {
@@ -67,6 +72,7 @@ let meal6 = {
   timeToCook: "30 min",
   price: 90,
   hidden: false,
+  html: "",
 };
 
 let meal7 = {
@@ -78,6 +84,7 @@ let meal7 = {
   timeToCook: "Time in hours and minutes",
   price: "Price, integer without quotiation marks",
   hidden: false,
+  html: "",
 };
 
 let meal8 = {
@@ -89,6 +96,7 @@ let meal8 = {
   timeToCook: "Time in hours and minutes",
   price: "Price, integer without quotiation marks",
   hidden: false,
+  html: "",
 };
 
 let meal9 = {
@@ -101,6 +109,7 @@ let meal9 = {
   timeToCook: "1 hr",
   price: 90,
   hidden: false,
+  html: "",
 };
 
 let meal10 = {
@@ -112,6 +121,7 @@ let meal10 = {
   timeToCook: "Time in hours and minutes",
   price: "Price, integer without quotiation marks",
   hidden: false,
+  html: "",
 };
 
 let meal11 = {
@@ -123,6 +133,7 @@ let meal11 = {
   timeToCook: "Time in hours and minutes",
   price: "Price, integer without quotiation marks",
   hidden: false,
+  html: "",
 };
 
 let meal12 = {
@@ -135,6 +146,7 @@ let meal12 = {
   timeToCook: "1 hr 15 min",
   price: 38,
   hidden: false,
+  html: "",
 };
 
 // #endregion
@@ -142,10 +154,13 @@ let meal12 = {
 const cards = document.getElementById("cards");
 const searchInput = document.getElementById("searchInput");
 
-// Minimum characters requierd before search fiters results.
+const starSolid = "icons/starSolid.svg";
+const starOutlined = "icons/star.svg";
+
+// Minimum characters requierd before search fiters results
 const SEARCH_MINIMUM_CHAR_COUNT = 3;
 
-// To place all meal cards on website.
+// To place all meal cards on website
 function spawnCard(meal) {
   const card = `<div id="${meal.id}" class="swedishBreakfast">
 <img
@@ -163,22 +178,26 @@ function spawnCard(meal) {
 </div>
 
 <div class="reviews">
-  <img src="icons/starSolid.svg" alt="" />
-  <img src="icons/starSolid.svg" alt="" />
-  <img src="icons/starSolid.svg" alt="" />
-  <img src="icons/starSolid.svg" alt="" />
-  <img src="icons/starSolid.svg" alt="" />
+  <img id="${meal.id}star1" src="icons/starSolid.svg" alt="" />
+  <img id="${meal.id}star2" src="icons/starSolid.svg" alt="" />
+  <img id="${meal.id}star3" src="icons/starSolid.svg" alt="" />
+  <img id="${meal.id}star4" src="icons/starSolid.svg" alt="" />
+  <img id="${meal.id}star5" src="icons/starSolid.svg" alt="" />
 </div>
 </div>`;
 
   cards.innerHTML += card;
+  //setStars(meal);
 }
 
 // Contains all meal items
 let listOfMeals = [meal3, meal6, meal9, meal12];
 
-// Display all meals as cards on website.
-listOfMeals.forEach((meal) => spawnCard(meal));
+// Display all meals as cards on website
+listOfMeals.forEach((meal) => {
+  spawnCard(meal);
+  setStars(meal);
+});
 
 // #region search bar
 
@@ -222,3 +241,39 @@ function showMeal(meal) {
 }
 
 // #endregion
+
+// Iactivates/activates stars in meal cards
+function setStars(meal) {
+  const parent = document.getElementById(meal.id);
+  const star1 = parent.querySelector("#" + meal.id + "star1");
+  const star2 = parent.querySelector("#" + meal.id + "star2");
+  const star3 = parent.querySelector("#" + meal.id + "star3");
+  const star4 = parent.querySelector("#" + meal.id + "star4");
+  const star5 = parent.querySelector("#" + meal.id + "star5");
+
+  if (meal.stars >= 1) {
+    star1.src = starSolid;
+  } else {
+    star1.src = starOutlined;
+  }
+  if (meal.stars >= 2) {
+    star2.src = starSolid;
+  } else {
+    star2.src = starOutlined;
+  }
+  if (meal.stars >= 3) {
+    star3.src = starSolid;
+  } else {
+    star3.src = starOutlined;
+  }
+  if (meal.stars >= 4) {
+    star4.src = starSolid;
+  } else {
+    star4.src = starOutlined;
+  }
+  if (meal.stars >= 5) {
+    star5.src = starSolid;
+  } else {
+    star5.src = starOutlined;
+  }
+}
