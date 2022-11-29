@@ -52,44 +52,70 @@
       </div>
 
       <div class="content">
-        <!-- <div id="details">
-          <button id="close">&times;</button>
+        <div class="detailsBackground" id="detailsBackground"></div>
+        <div id="details">
+          <button id="close"><p>&times;</p></button>
           <img
-            id="imageContainer"
+            id="image"
             src="images/potatoPancakes.jpeg"
             alt="Shows image that you clicked on"
           />
-          <h2 id="imageHeader">Potato pancakes with lingonberries</h2>
-          <p class="dishDescription">
-            Potato pancankes aka raggmunk has been a classic Swedish meal since
-            the early 20th century.
+          <div class="clock">
+            <img src="icons/clock.svg" alt="A clock" />
+            <p id="clock">
+              <!-- 30 min -->
+            </p>
+          </div>
+          <h1 id="detailsName">
+            <!-- Potato pancakes with lingonberries -->
+          </h1>
+          <p class="dishDescription" id="dishDescription">
+            <!-- Potato pancankes aka raggmunk has been a classic Swedish meal since
+            the early 20th century. -->
           </p>
-          <p class="recipe">
-            Ingredients: 2 cups of whole milk 3/4 cups of wheat flour 2
-            teaspoons of salt 1 large egg 800 g of potatoes Butter to fry in To
-            serve: Bacon or salted pork side, thinly sliced Lingonberry jam
-            Whisk together milk and flour in a bowl. Mix eggs and salt. Grate
-            the potatoes on the fine or coarse part (more a matter of taste and
-            what you like) of a grater and mix them into the batter. Let it rest
-            for 30 minutes before frying the potato pancakes. Heat a generous
-            dollop of butter in a frying pan. Pour about ½ cup of batter in the
-            pan and fry to a thick pancake (about as thick as American
-            pancakes), think about spreading the batter over the frying pan so
-            that the grated potatoes is evenly spread throughout the "pancake"
-            and not only as a pile in the middle. Fry on medium heat on both
-            sides until the pancake is golden brown and crispy on the edges. Be
-            careful not to overheat so that they get color before the potatoes
-            is actually cooked, it takes about 4 minutes per side. Place the
-            pancakes on a plate or in a baking dish and put them in the oven to
-            keep them heated, on about 165 degrees Fahrenheit. Fry the bacon or
-            sliced pork until they are golden and crispy, then let them drain on
-            some paper or kitchen towels. Serve the warm potato pancakes with
-            fried bacon or pork and lingonberry jam.
-          </p>
+          <div class="recipe">
+            <h3 class="ingredientsHeader" id="ingredientsHeader">
+              Ingredients:
+            </h3>
+            <ul class="ingredients" id="ingredients">
+              <!-- <li>2 cups of whole milk</li>
+              <li>3/4 cups of wheat flour</li>
+              <li>2 teaspoons of salt</li>
+              <li>1 large egg</li>
+              <li>800 g of potatoes</li>
+              <li>Butter to fry in</li> -->
+            </ul>
+            <h3 class="serveWithHeader" id="serveWithHeader">Serve with:</h3>
+            <ul class="serveWith" id="serveWith">
+              <!-- <li>Bacon or salted pork side, thinly sliced</li>
+              <li>Lingonberry jam</li> -->
+            </ul>
+            <h3 class="howToHeader" id="howToHeader">How to:</h3>
+            <p class="howTo" id="howTo">
+              <!-- Whisk together milk and flour in a bowl. Mix eggs and salt. Grate
+              the potatoes on the fine or coarse part (more a matter of taste
+              and what you like) of a grater and mix them into the batter. Let
+              it rest for 30 minutes before frying the potato pancakes. Heat a
+              generous dollop of butter in a frying pan. Pour about ½ cup of
+              batter in the pan and fry to a thick pancake (about as thick as
+              American pancakes), think about spreading the batter over the
+              frying pan so that the grated potatoes is evenly spread throughout
+              the "pancake" and not only as a pile in the middle. Fry on medium
+              heat on both sides until the pancake is golden brown and crispy on
+              the edges. Be careful not to overheat so that they get color
+              before the potatoes is actually cooked, it takes about 4 minutes
+              per side. Place the pancakes on a plate or in a baking dish and
+              put them in the oven to keep them heated, on about 165 degrees
+              Fahrenheit. Fry the bacon or sliced pork until they are golden and
+              crispy, then let them drain on some paper or kitchen towels. Serve
+              the warm potato pancakes with fried bacon or pork and lingonberry
+              jam. -->
+            </p>
+          </div>
           <button type="button" id="addToShoppingCart">
-            Add to shopping cart
+            <p>Add to cart</p>
           </button>
-        </div> -->
+        </div>
         <div class="cards" id="cards">
           <!--DON'T CHANGE THE GREY LINES OF CODE!-->
 
@@ -105,10 +131,10 @@
             </p>
 
             <div class="time">
-              <img src="icons/clock.svg" alt="" />
-             <div class="price">
-              <p>$</p>
+              <img src="icons/clock.svg" alt="A clock" />
             </div>
+            <div class="price">
+              <p>$</p>
             </div>
             <div class="reviews">
               <img id="star1" src="icons/starSolid.svg" alt="" />

@@ -9,8 +9,13 @@ let meal = {
   stars: "How many stars, integer without quotation marks",
   timeToCook: "Time in hours and minutes",
   price: "Price, integer without quotiation marks",
+  dishDescription: "A longer description of the dish",
+  ingredients:
+    "List all ingredients needed. Write them inside [] and quotation marks between each ingredient",
+  serveWith:
+    "List some serving tips. Write them inside [] and quotation marks between each tip",
+  howTo: "How to make the dish",
   hidden: false,
-  html: "",
 };
 
 let meal2 = {
@@ -21,8 +26,13 @@ let meal2 = {
   stars: "How many stars, integer without quotation marks",
   timeToCook: "Time in hours and minutes",
   price: "Price, integer without quotiation marks",
+  dishDescription: "A longer description of the dish",
+  ingredients:
+    "List all ingredients needed. Write them inside [] and quotation marks between each ingredient",
+  serveWith:
+    "List some serving tips. Write them inside [] and quotation marks between each tip",
+  howTo: "How to make the dish",
   hidden: false,
-  html: "",
 };
 
 let meal3 = {
@@ -34,8 +44,26 @@ let meal3 = {
   stars: 4,
   timeToCook: "15 min",
   price: 5,
+  dishDescription:
+    "The Swedish breakfast consits of two slices of bread with butter and cheese, a boiled egg, muesli and other foods.",
+  ingredients: [
+    "Organge Juice",
+    "Coffee",
+    "Sandwich",
+    "Butter",
+    "Vegetables of your own choice",
+    "Cheese",
+    "Boiled eggs",
+    "Muesli",
+    "Yoghurt or filmjölk",
+    "Berries for garnish",
+  ],
+  serveWith: [
+    "Commonly used vegetables for breakfast is cucumber, bell pepper and tomatoes",
+    "You can also add some cod roe spread (preferably Kalles) on the bread",
+  ],
+  howTo: "Serve all the items and enjoy your authentic Swedish breakfast!",
   hidden: false,
-  html: "",
 };
 
 let meal4 = {
@@ -46,8 +74,13 @@ let meal4 = {
   stars: "How many stars, integer without quotation marks",
   timeToCook: "Time in hours and minutes",
   price: "Price, integer without quotiation marks",
+  dishDescription: "A longer description of the dish",
+  ingredients:
+    "List all ingredients needed. Write them inside [] and quotation marks between each ingredient",
+  serveWith:
+    "List some serving tips. Write them inside [] and quotation marks between each tip",
+  howTo: "How to make the dish",
   hidden: false,
-  html: "",
 };
 
 let meal5 = {
@@ -58,8 +91,13 @@ let meal5 = {
   stars: "How many stars, integer without quotation marks",
   timeToCook: "Time in hours and minutes",
   price: "Price, integer without quotiation marks",
+  dishDescription: "A longer description of the dish",
+  ingredients:
+    "List all ingredients needed. Write them inside [] and quotation marks between each ingredient",
+  serveWith:
+    "List some serving tips. Write them inside [] and quotation marks between each tip",
+  howTo: "How to make the dish",
   hidden: false,
-  html: "",
 };
 
 let meal6 = {
@@ -71,8 +109,20 @@ let meal6 = {
   stars: 3,
   timeToCook: "30 min",
   price: 9,
+  dishDescription:
+    "Potato pancankes aka raggmunk has been a classic Swedish meal since the early 20th century.",
+  ingredients: [
+    "2 cups of whole milk",
+    "3/4 cups of wheat flour",
+    "2 teaspoons of salt",
+    "1 large egg",
+    "800 g of potatoes",
+    "Butter to fry in",
+  ],
+  serveWith: ["Bacon or salted pork side, thinly sliced", "Lingonberry jam"],
+  howTo:
+    'Whisk together milk and flour in a bowl. Mix eggs and salt. Grate the potatoes on the fine or coarse part (more a matter of taste and what you like) of a grater and mix them into the batter. Let it rest for 30 minutes before frying the potato pancakes. Heat a generous dollop of butter in a frying pan. Pour about ½ cup of batter in the pan and fry to a thick pancake (about as thick as American pancakes), think about spreading the batter over the frying pan so that the grated potatoes is evenly spread throughout the "pancake" and not only as a pile in the middle. Fry on medium heat on both sides until the pancake is golden brown and crispy on the edges. Be careful not to overheat so that they get color before the potatoes is actually cooked, it takes about 4 minutes per side. Place the pancakes on a plate or in a baking dish and put them in the oven to keep them heated, on about 165 degrees Fahrenheit. Fry the bacon or sliced pork until they are golden and crispy, then let them drain on some paper or kitchen towels. Serve the warm potato pancakes with fried bacon or pork and lingonberry jam.',
   hidden: false,
-  html: "",
 };
 
 let meal7 = {
@@ -83,8 +133,13 @@ let meal7 = {
   stars: "How many stars, integer without quotation marks",
   timeToCook: "Time in hours and minutes",
   price: "Price, integer without quotiation marks",
+  dishDescription: "A longer description of the dish",
+  ingredients:
+    "List all ingredients needed. Write them inside [] and quotation marks between each ingredient",
+  serveWith:
+    "List some serving tips. Write them inside [] and quotation marks between each tip",
+  howTo: "How to make the dish",
   hidden: false,
-  html: "",
 };
 
 let meal8 = {
@@ -95,8 +150,13 @@ let meal8 = {
   stars: "How many stars, integer without quotation marks",
   timeToCook: "Time in hours and minutes",
   price: "Price, integer without quotiation marks",
+  dishDescription: "A longer description of the dish",
+  ingredients:
+    "List all ingredients needed. Write them inside [] and quotation marks between each ingredient",
+  serveWith:
+    "List some serving tips. Write them inside [] and quotation marks between each tip",
+  howTo: "How to make the dish",
   hidden: false,
-  html: "",
 };
 
 let meal9 = {
@@ -108,8 +168,29 @@ let meal9 = {
   stars: 5,
   timeToCook: "1 hr",
   price: 10,
+  dishDescription:
+    "Every swede has their own favourite meatballs recipe and many celebrity chefs serve their own versions in their restaurants. Most people will say that their mum's recipe is the best of course!",
+  ingredients: [
+    "2 tablespoons breadcrumbs",
+    "50 ml cream",
+    "1 egg",
+    "1 tablespoon concentrated beef stock",
+    "1 yellow onion",
+    "25 g butter",
+    "500 g ground mince",
+    "1 teaspoon ground black pepper",
+    "1.5 teaspoons salt",
+    "1 cup double cream",
+    "1.5 teaspoon dark soy",
+    "1 cup beef stock",
+    "25 g butter",
+    "1 tablespoon corn starch",
+    "2 tablespoons lingonberry jam",
+  ],
+  serveWith: ["Potato mash", "Piffi spice (a Swedish spice mix)"],
+  howTo:
+    "Fold together bread crumbs, cream, stock and egg and leave to rest for about 5 minutes. Fry the onion in the butter until soft and then mix it with the breadcrumb-cream. Add salt, pepper and mince and work everything together, with your hands or fork. Try not to work it too much, as this will make the meatballs compact. Take a small piece of mince and fry it to test the flavours. When satisfied with salt and pepper, roll the rest of the mince to small balls (about one tablespoon mince per ball) Make sure your hands are wet with water, then the mince won’t stick to your hands. Fry the meatballs until golden brown and thoroughly cooked, then put aside. Mix cream and the corn starch and then pour this, stock and the soy in the pan where you fried the meatballs. Whisk through the pan and let boil for a couple of minutes. Taste with salt, pepper and jam for a little bit of sweetness. Put the meatballs back to the sauce and serve with mashed potatoes and lingonberry jam, maybe some chopped parsley on top too.",
   hidden: false,
-  html: "",
 };
 
 let meal10 = {
@@ -120,8 +201,13 @@ let meal10 = {
   stars: "How many stars, integer without quotation marks",
   timeToCook: "Time in hours and minutes",
   price: "Price, integer without quotiation marks",
+  dishDescription: "A longer description of the dish",
+  ingredients:
+    "List all ingredients needed. Write them inside [] and quotation marks between each ingredient",
+  serveWith:
+    "List some serving tips. Write them inside [] and quotation marks between each tip",
+  howTo: "How to make the dish",
   hidden: false,
-  html: "",
 };
 
 let meal11 = {
@@ -132,8 +218,13 @@ let meal11 = {
   stars: "How many stars, integer without quotation marks",
   timeToCook: "Time in hours and minutes",
   price: "Price, integer without quotiation marks",
+  dishDescription: "A longer description of the dish",
+  ingredients:
+    "List all ingredients needed. Write them inside [] and quotation marks between each ingredient",
+  serveWith:
+    "List some serving tips. Write them inside [] and quotation marks between each tip",
+  howTo: "How to make the dish",
   hidden: false,
-  html: "",
 };
 
 let meal12 = {
@@ -145,14 +236,48 @@ let meal12 = {
   stars: 4,
   timeToCook: "1 hr 15 min",
   price: 3,
+  dishDescription:
+    "This recipe will provide a semla that is a delicious way to celebrate Fat Tuesday! Semlor are a delicious tradition in Sweden, but you can make them in your own kitchen, no matter where you live!",
+  ingredients: [
+    "4 cups all purpose flour",
+    "2 teaspoons dry yeast",
+    "1/2 cup warm milk",
+    "1/3 cup sugar",
+    "1/3 cup melted butter",
+    "1 teaspoon salt",
+    "1 egg",
+    "1 teaspoon cardamom",
+    "1/2 cup lukewarm water",
+    "1 egg yolk",
+    "1 tablespoon cream",
+    "1 egg white",
+    "1/2 cup ground almond without skins",
+    "3/4 cup powdered sugar",
+  ],
+  serveWith: ["Whipping cream", "Powdered sugar"],
+  howTo:
+    "In bread machine or stand mixer, place the lukewarm water, yeast and 1/2 tsp of sugar. Allow to rest for a few minutes, until the yeast begins to grow. Mix the milk, melted butter, beaten egg together, then add to the yeast mixture. Add the cardamom, flour, 1/3 cup of sugar and salt, and turn on machine (dough setting on bread machine or use a dough hook if using a stand mixer.) Mix and knead by hand if you aren't using a machine. Dough will be slightly sticky. Allow cycle to finish on dough setting; with stand mixer, or by hand, when the dough is ready, cover it and let rise on the counter until doubled in size. After it's risen, punch down the dough, and let rest for 5 minutes. Cut pieces of the dough and shape into round balls (about 15 to 18), and place onto a greased cookie sheet (or silicone sheet) about an inch apart. Place the tray in the oven (do not turn it on) to rise for about half an hour or until doubled in size. Once doubled, remove the buns from the oven and brush with the egg glaze (just mix the egg and cream together and brush on gently.) Preheat the oven to 350º F (175ºC) then cook the buns for approximately 20 minutes, or until golden brown. While they are baking, prepare the almond paste. Whip the egg white until soft peaks form, then fold in the ground almonds and powdered sugar. Cover and set aside. Remove the cooked buns from the tray, and place on a cooling rack. When the Semlor are completely cool, whip the cream and assemble them. Begin by cutting a top on each bun with a sharp knife, cutting down into the center of the bun to create a space for filling in the bun. Then put a teaspoonful, or more, of the almonds paste. Next, top with whipped cream. Place the top on the cream, and dust with powdered sugar. Repeat with remaining Semlor.",
   hidden: false,
-  html: "",
 };
 
 // #endregion
 
 const cards = document.getElementById("cards");
 const searchInput = document.getElementById("searchInput");
+
+const details = document.getElementById("details");
+const detailsBackground = document.getElementById("detailsBackground");
+const detailsName = document.getElementById("detailsName");
+const image = document.getElementById("image");
+const dishDescription = document.getElementById("dishDescription");
+const ingredientsHeader = document.getElementById("ingredientsHeader");
+const ingredients = document.getElementById("ingredients");
+const serveWithHeader = document.getElementById("serveWithHeader");
+const serveWith = document.getElementById("serveWith");
+const howToHeader = document.getElementById("howToHeader");
+const howTo = document.getElementById("howTo");
+const clock = document.getElementById("clock");
+const close = document.getElementById("close");
 
 const starSolid = "icons/starSolid.svg";
 const starOutlined = "icons/star.svg";
@@ -189,7 +314,6 @@ function spawnCard(meal) {
 </div>`;
 
   cards.innerHTML += card;
-  //setStars(meal);
 }
 
 // Contains all meal items
@@ -199,6 +323,13 @@ let listOfMeals = [meal3, meal6, meal9, meal12];
 listOfMeals.forEach((meal) => {
   spawnCard(meal);
   setStars(meal);
+});
+
+listOfMeals.forEach((meal) => {
+  let element = document.getElementById(meal.id);
+  element.addEventListener("click", function () {
+    clickedMeal(meal);
+  });
 });
 
 // #region search bar
@@ -278,4 +409,40 @@ function setStars(meal) {
   } else {
     star5.src = starOutlined;
   }
+}
+
+hideDetails();
+
+function clickedMeal(meal) {
+  dishDescription.innerText = meal.dishDescription;
+  detailsName.innerText = meal.name;
+  image.src = meal.image;
+  meal.ingredients.forEach((ingredient) => {
+    /* The following 3 lines of code was adapted from https://stackoverflow.com/questions/20673959/how-to-add-new-li-to-ul-onclick-with-javascript Accessed: 2022-11-29 */
+    let li = document.createElement("li");
+    li.appendChild(document.createTextNode(ingredient));
+    ingredients.appendChild(li);
+  });
+  meal.serveWith.forEach((item) => {
+    let li = document.createElement("li");
+    li.appendChild(document.createTextNode(item));
+    serveWith.appendChild(li);
+  });
+  howTo.innerText = meal.howTo;
+  clock.innerText = meal.timeToCook;
+  showDetails();
+}
+
+close.addEventListener("click", function () {
+  hideDetails();
+});
+
+function hideDetails() {
+  details.style.display = "none";
+  detailsBackground.style.display = "none";
+}
+
+function showDetails() {
+  details.style.display = "block";
+  detailsBackground.style.display = "block";
 }
