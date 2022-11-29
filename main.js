@@ -33,7 +33,7 @@ let meal3 = {
   image: "images/SwedishBreakfast.png",
   stars: 4,
   timeToCook: "15 min",
-  price: 60,
+  price: 5,
   hidden: false,
   html: "",
 };
@@ -70,7 +70,7 @@ let meal6 = {
   image: "images/potatoPancakes.jpeg",
   stars: 3,
   timeToCook: "30 min",
-  price: 90,
+  price: 9,
   hidden: false,
   html: "",
 };
@@ -107,7 +107,7 @@ let meal9 = {
   image: "images/swedishMeatballs.jpeg",
   stars: 5,
   timeToCook: "1 hr",
-  price: 90,
+  price: 10,
   hidden: false,
   html: "",
 };
@@ -144,7 +144,7 @@ let meal12 = {
   image: "images/semla.jpg",
   stars: 4,
   timeToCook: "1 hr 15 min",
-  price: 38,
+  price: 3,
   hidden: false,
   html: "",
 };
@@ -176,7 +176,9 @@ function spawnCard(meal) {
   <img src="icons/clock.svg" alt="" />
   <p class="timeToCook">${meal.timeToCook}</p>
 </div>
-
+<div class="price">
+  <p>$ ${meal.price}</p>
+</div>
 <div class="reviews">
   <img id="${meal.id}star1" src="icons/starSolid.svg" alt="" />
   <img id="${meal.id}star2" src="icons/starSolid.svg" alt="" />
