@@ -453,6 +453,50 @@ h1 {
   margin-top: 1rem;
 }
 
+hr {
+  border: 0.05rem solid #bababa;
+  width: 45rem;
+}
+
+.cartMeal {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#cartMealImage {
+  width: 12rem;
+  border-radius: 1rem;
+  height: 7.5rem;
+}
+
+.cartMealInfo {
+  width: calc(100% - 12rem - 3rem);
+  background-color: #50c878;
+}
+
+.addRemove {
+  width: 1rem;
+  fill: #bababa;
+}
+
+.amountCard {
+  display: flex;
+  border: 0.05rem solid #bababa;
+  width: 5rem;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.amount {
+  width: 2rem;
+  text-align: center;
+  margin: 0;
+}
+
 .total {
   position: relative;
   background-color: #ffffff;
@@ -464,25 +508,34 @@ h1 {
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
 }
 
-.total h2 {
+.totalAmount {
+  display: inline-block;
   margin-left: 1rem;
   margin-top: 1rem;
+  width: 3rem;
+}
+
+.totalDollars {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-left: 14rem;
 }
 
 .checkOut {
   display: flex;
-  position: fixed;
+  position: absolute;
   background-color: #50c878;
   width: 18rem;
   height: 3rem;
   border-radius: 0.5rem;
   justify-content: center;
+  margin-top: 4rem;
   margin-left: calc((23rem - 18rem) / 2);
 }
 
 .continue {
   display: flex;
-  position: fixed;
+  position: absolute;
   background-color: #ffffff;
   border: solid #bababa 0.1rem;
   width: 18rem;
@@ -490,6 +543,7 @@ h1 {
   border-radius: 0.5rem;
   justify-content: center;
   margin-left: calc((23rem - 18rem) / 2);
+  margin-top: 8rem;
 }
 
 .continue p {
@@ -499,6 +553,7 @@ h1 {
 }
 
 .continue:hover {
+  background-color: #f8f8f8;
   cursor: pointer;
 }
 
