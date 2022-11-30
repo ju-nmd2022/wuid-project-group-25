@@ -156,6 +156,12 @@ button img {
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   cursor: pointer;
+  transition: 200ms;
+}
+
+.swedishBreakfast:hover {
+  transform: scale(1.1);
+  transition: 200ms;
 }
 
 .swedishBreakfast img {
@@ -249,7 +255,7 @@ button img {
 
 h2 {
   font-family: "Inter", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #000000;
   margin-top: 0.5rem;
   margin-bottom: 0;
@@ -257,7 +263,7 @@ h2 {
   margin-right: 0.75rem;
 }
 
-.detailsBackground {
+h3 .detailsBackground {
   position: fixed;
   top: 0;
   left: 0;
@@ -409,20 +415,94 @@ h1 {
   justify-content: center;
 }
 
-#addToShoppingCart p {
+#addToShoppingCart p,
+.checkOut p {
   font-size: 1rem;
   color: #ffffff;
   align-self: center;
 }
 
-#addToShoppingCart:hover {
+#addToShoppingCart:hover,
+.checkOut:hover {
   background-color: #47af69;
   cursor: pointer;
 }
 
 /*#endregion*/
 
-.footer {
+.shoppingCartSite {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100vw;
+  height: 100vh;
+}
+
+.cart {
+  position: relative;
+  background-color: #ffffff;
+  width: 47rem;
+  height: 40rem;
+  top: calc(4.75rem + 1rem);
+  border-radius: 1rem;
+  left: 3rem;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+}
+
+.cart h1 {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.total {
+  position: relative;
+  background-color: #ffffff;
+  width: 23rem;
+  height: 16rem;
+  border-radius: 1rem;
+  top: calc(4.75rem + 1rem);
+  left: 6rem;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+}
+
+.total h2 {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.checkOut {
+  display: flex;
+  position: fixed;
+  background-color: #50c878;
+  width: 18rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  justify-content: center;
+  margin-left: calc((23rem - 18rem) / 2);
+}
+
+.continue {
+  display: flex;
+  position: fixed;
+  background-color: #ffffff;
+  border: solid #bababa 0.1rem;
+  width: 18rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  justify-content: center;
+  margin-left: calc((23rem - 18rem) / 2);
+}
+
+.continue p {
+  font-size: 1rem;
+  color: #000000;
+  align-self: center;
+}
+
+.continue:hover {
+  cursor: pointer;
+}
+
+.flexbox {
   grid-area: footer;
 }
 
@@ -450,5 +530,3 @@ h1 {
     display: block;
   }
 }
-
-
