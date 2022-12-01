@@ -15,17 +15,19 @@
     <main class="container">
       <div class="header">
         <nav class="topnav">
+          <div class="search">
+            <a class="logo" href="index.html">
+              <img
+                src="images/logo.png"
+                alt="A logo containing a kitchen hat, a fork, a knife and the company name Cuisines with Culture"
+              />
+            </a>
+          </div>
           <ul class="navBar">
             <li>
               <a class="hamburgerMenu" href=""
                 ><img src="icons/hamburger.svg" alt="A hamburger menu"
               /></a>
-            </li>
-            <li id="search" class="invisible">
-              <input id="searchInput" type="text" placeholder="Search" />
-              <button type="submit">
-                <img src="icons/search.svg" alt="A magnifying glass" />
-              </button>
             </li>
             <li>
               <a href="index.html"
@@ -42,7 +44,7 @@
             <li>
               <a href="getHelp.html">Get help</a>
             </li>
-            <li>
+            <li class="shoppingCartParent">
               <a class="shoppingCart" href=""
                 ><img src="icons/shoppingcartGreen.svg" alt="Shopping Cart"
               /></a>
@@ -58,19 +60,27 @@
           <div class="cartMeal">
             <img id="cartMealImage" src="images/potatoPancakes.jpeg" alt="" />
             <div class="cartMealInfo">
-              <h2>Potato pancakes with lingonberries</h2>
-              <h2>$20</h2>
-              <p>$20</p>
-              <p>In stock</p>
-              <div class="amountCard">
-                <img id="add" class="addRemove" src="icons/plus.svg" alt="" />
-                <p class="amount">1</p>
-                <img
-                  id="remove"
-                  class="addRemove"
-                  src="icons/minus.svg"
-                  alt=""
-                />
+              <h2 class="cartMealName">Potato pancakes with lingonberries</h2>
+              <h2 class="cartMealMoney">$20</h2>
+              <div class="cartMealSmallInfo">
+                <p class="cartMealP">$20</p>
+                <p class="cartMealAvailable">In stock</p>
+              </div>
+              <div class="amountDelete">
+                <div class="amountCard">
+                  <img
+                    id="remove"
+                    class="addRemove"
+                    src="icons/minus.svg"
+                    alt=""
+                  />
+                  <p class="amount">1</p>
+                  <img id="add" class="addRemove" src="icons/plus.svg" alt="" />
+                </div>
+                <div class="delete">
+                  <img class="trash" src="icons/trash.svg" alt="" />
+                  <p class="trashP">Delete</p>
+                </div>
               </div>
             </div>
           </div>

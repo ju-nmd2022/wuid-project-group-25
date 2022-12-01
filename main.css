@@ -31,7 +31,7 @@ body {
   height: 4.75rem;
   margin: 0;
   flex-direction: row;
-  justify-content: end;
+  justify-content: space-between;
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
   z-index: 4;
   overflow: hidden;
@@ -42,7 +42,7 @@ body {
   font-size: 1rem;
 }
 
-.topnav a {
+.topnav ul li a {
   text-decoration: none;
   color: #000000;
   font-family: "Inter", sans-serif;
@@ -54,12 +54,26 @@ body {
   text-decoration: underline;
 }
 
+.logo {
+  margin-left: 1rem;
+}
+
+.logo img {
+  height: 4.75rem;
+  padding: 0.25rem 0;
+  box-sizing: border-box;
+}
+
 .chevron {
   width: 0.8rem;
 }
 
 .shoppingCart img {
   width: 1.4rem;
+}
+
+.topnav ul .shoppingCartParent {
+  width: 2.4rem;
 }
 
 .hamburgerMenu img {
@@ -70,16 +84,16 @@ body {
 .topnav ul {
   flex-direction: row;
   display: flex;
-  align-self: flex-end;
+  align-items: center;
   padding: 0;
-  margin-right: 2rem;
 }
 
 .topnav ul li {
   text-align: center;
   align-self: center;
   list-style: none;
-  width: 8rem;
+  padding: 0 1rem;
+  margin: 0 1rem;
 }
 
 input,
@@ -100,6 +114,12 @@ input:focus {
   color: #000000;
 }
 
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 #search:focus-within {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.15);
 }
@@ -112,6 +132,7 @@ input:focus {
   border-radius: 0.25rem;
   padding: 0.5rem;
   box-sizing: border-box;
+  margin-left: 3rem;
 }
 
 .invisible {
@@ -463,6 +484,7 @@ hr {
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
+  margin: 1rem 0;
 }
 
 #cartMealImage {
@@ -472,8 +494,42 @@ hr {
 }
 
 .cartMealInfo {
+  position: relative;
   width: calc(100% - 12rem - 3rem);
-  background-color: #50c878;
+}
+
+.cartMealName {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.cartMealMoney {
+  display: inline-block;
+  margin-left: 7.9rem;
+}
+
+.cartMealP {
+  display: inline-block;
+  color: #bababa;
+  margin-left: 1rem;
+}
+
+.cartMealAvailable {
+  display: inline-block;
+  color: #50c878;
+  margin-left: 1rem;
+}
+
+.cartMealSmallInfo {
+  position: relative;
+}
+
+.amountDelete {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .addRemove {
@@ -481,6 +537,25 @@ hr {
   fill: #bababa;
 }
 
+#remove,
+#add {
+  width: 0.6rem;
+}
+
+.delete {
+  display: flex;
+  width: 5rem;
+  margin-right: 1rem;
+}
+
+.trash {
+  width: 1.2rem;
+}
+
+.trashP {
+  color: #bababa;
+  margin-left: 0.5rem;
+}
 .amountCard {
   display: flex;
   border: 0.05rem solid #bababa;
@@ -489,9 +564,11 @@ hr {
   border-radius: 0.5rem;
   align-items: center;
   justify-content: space-evenly;
+  margin-left: 1rem;
 }
 
 .amount {
+  display: inline-block;
   width: 2rem;
   text-align: center;
   margin: 0;
