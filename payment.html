@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+    </style>
+    <title>Payment</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="header">
+        <nav class="topnav">
+          <div class="search">
+            <a class="logo" href="index.html">
+              <img
+                src="images/logo.png"
+                alt="A logo containing a kitchen hat, a fork, a knife and the company name Cuisines with Culture"
+              />
+            </a>
+            <div id="search">
+              <input id="searchInput" type="text" placeholder="Search" />
+              <button type="submit">
+                <img src="icons/search.svg" alt="A magnifying glass" />
+              </button>
+            </div>
+          </div>
+          <ul class="navBar">
+            <li>
+              <a class="hamburgerMenu" href=""
+                ><img src="icons/hamburger.svg" alt="A hamburger menu"
+              /></a>
+            </li>
+
+            <li>
+              <a class="active" href="index.html"
+                >Recipes
+                <img
+                  class="chevron"
+                  src="icons/chevron.svg"
+                  alt="A Chevron pointing down"
+              /></a>
+            </li>
+            <li>
+              <a href="how.html">How</a>
+            </li>
+            <li>
+              <a href="getHelp.html">Get help</a>
+            </li>
+            <li class="shoppingCartParent">
+              <div class="shoppingCartBall">
+                <p>5</p>
+              </div>
+              <a class="shoppingCart" href="shoppingCart.html"
+                ><img src="icons/shoppingcart.svg" alt="Shopping Cart"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="paymentPage">
+        <div class="summaryOrder">
+          <h1>Summary Order</h1>
+          <hr />
+          <div class="summaryOrderInfo">
+            <img src="images/potatoPancakes.jpeg" alt="" />
+            <h2 class="summaryOrderName">Potato pancakes with lingonberries</h2>
+          </div>
+          <h2 class="money">$10</h2>
+          <hr />
+        </div>
+      </div>
+      <div class="paymentDetails">
+        <h1>Payment Details</h1>
+        <p class="infoText">
+          Complete your purchase by providing your payment details.
+        </p>
+        <p>Email Address</p>
+        <form>
+          <label for="email">@ annaandersson@hotmail.com</label>
+          <input type="text" />
+        </form>
+        <p>Card Details</p>
+        <div class="cardDetails">
+          <form>
+            <img src="icons/card.svg" alt="" />
+            <label for="cardDetails">Card Number</label>
+          </form>
+          <form>
+            <label for="cardDetails">MM / YY</label>
+          </form>
+          <form>
+            <label for="cardDetails">CVC</label>
+          </form>
+        </div>
+        <p>Card Holder</p>
+        <form>
+          <img src="icons/user.svg" alt="" />
+          <label for="cardHolder">First and Last Name</label>
+        </form>
+        <p>Billing Address</p>
+        <div class="billingAddress">
+          <form>
+            <label for="billingAddress">Street</label>
+          </form>
+          <form>
+            <label for="billingAddress">City</label>
+          </form>
+          <form>
+            <label for="billingAddress">Zip Code</label>
+          </form>
+        </div>
+        <div class="totalPay">
+          <h2>Total:</h2>
+          <h2>$20</h2>
+        </div>
+        <a href="">
+          <button type="button" class="pay">
+            <p>Pay $20</p>
+          </button></a
+        >
+      </div>
+      <footer class="flexbox"></footer>
+    </main>
+  </body>
+</html>

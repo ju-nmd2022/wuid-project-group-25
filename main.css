@@ -81,6 +81,27 @@ body {
   width: 1.4rem;
 }
 
+.shoppingCartBall {
+  display: flex;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: #50c878;
+  position: absolute;
+  margin-left: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-0.6rem);
+}
+
+.shoppingCartBall p {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #ffffff;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
 .topnav ul {
   flex-direction: row;
   display: flex;
@@ -437,19 +458,23 @@ h1 {
 }
 
 #addToShoppingCart p,
-.checkOut p {
+.checkOut p,
+.pay p {
   font-size: 1rem;
   color: #ffffff;
   align-self: center;
 }
 
 #addToShoppingCart:hover,
-.checkOut:hover {
+.checkOut:hover,
+.pay:hover {
   background-color: #47af69;
   cursor: pointer;
 }
 
 /*#endregion*/
+
+/*#region shopping cart page*/
 
 .shoppingCartSite {
   display: grid;
@@ -633,6 +658,129 @@ hr {
   background-color: #f8f8f8;
   cursor: pointer;
 }
+
+/*#endregion*/
+
+/*#region payment page*/
+
+.paymentPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100vw;
+  height: 100vh;
+}
+
+.summaryOrder {
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  width: 23rem;
+  height: 40rem;
+  top: calc(4.75rem + 1rem);
+  left: 3rem;
+}
+
+.summaryOrder h1,
+.paymentDetails h1 {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.summaryOrderInfo {
+  display: flex;
+}
+
+.summaryOrder img {
+  display: inline-block;
+  width: 8rem;
+  height: 4.9rem;
+  border-radius: 1rem;
+  margin-left: 1rem;
+}
+
+.summaryOrder hr {
+  width: 21rem;
+}
+
+.summaryOrderName {
+  display: inline-block;
+}
+
+.money {
+  margin-left: 9.7rem;
+  transform: translateY(-2rem);
+}
+
+.paymentDetails {
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  width: 47rem;
+  height: 40rem;
+  top: calc(4.75rem + 1rem);
+  left: calc(23rem + 1.5rem);
+}
+
+.paymentDetails img {
+  width: 1rem;
+}
+
+.paymentDetails p {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.paymentDetails form {
+  margin-left: 1rem;
+  border: 1px solid #bababa;
+  border-radius: 0.5rem;
+  height: 3.1rem;
+  width: 28rem;
+  justify-content: center;
+}
+
+.cardDetails,
+.billingAddress {
+  display: flex;
+}
+
+.paymentDetails label {
+  display: block;
+  text-align: start;
+  color: #bababa;
+}
+
+.infoText {
+  color: #bababa;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.totalPay {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 19rem;
+}
+
+.totalPay h2 {
+  display: inline-block;
+}
+
+.pay {
+  display: flex;
+  position: absolute;
+  background-color: #50c878;
+  width: 18rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-left: calc((47rem - 23rem) / 2);
+}
+
+/*#endregion*/
 
 .flexbox {
   grid-area: footer;
