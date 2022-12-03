@@ -414,17 +414,30 @@ function setStars(meal) {
 hideDetails();
 
 function clickedMeal(meal) {
+  let oldIngredients = document.querySelectorAll(".ingredientItem");
+  let oldServeWith = document.querySelectorAll(".serveWithItem");
+
+  oldIngredients.forEach((ingredientItem) => {
+    ingredientItem.remove();
+  });
+
+  oldServeWith.forEach((serveWithItem) => {
+    serveWithItem.remove();
+  });
+
   dishDescription.innerText = meal.dishDescription;
   detailsName.innerText = meal.name;
   image.src = meal.image;
   meal.ingredients.forEach((ingredient) => {
     /* The following 3 lines of code was adapted from https://stackoverflow.com/questions/20673959/how-to-add-new-li-to-ul-onclick-with-javascript Accessed: 2022-11-29 */
     let li = document.createElement("li");
+    li.classList.add("ingredientItem");
     li.appendChild(document.createTextNode(ingredient));
     ingredients.appendChild(li);
   });
   meal.serveWith.forEach((item) => {
     let li = document.createElement("li");
+    li.classList.add("serveWithItem");
     li.appendChild(document.createTextNode(item));
     serveWith.appendChild(li);
   });

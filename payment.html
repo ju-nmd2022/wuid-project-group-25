@@ -80,46 +80,39 @@
         <p class="infoText">
           Complete your purchase by providing your payment details.
         </p>
-        <p>Email Address</p>
-        <form>
-          <label for="email">@ annaandersson@hotmail.com</label>
-          <input type="text" />
+        <form action="submit">
+          <label for="emailAddress">Email Address</label>
+          <input
+            type="email"
+            placeholder="annanadersson@hotmail.com"
+            id="emailAddress"
+          />
+          <label for="cardNumber">Card Number</label>
+          <div class="cardNumber">
+            <input type="text" placeholder="Card Number" id="number" />
+            <input type="text" placeholder="MM / YY" id="exDate" />
+            <input type="text" placeholder="CVC" id="cvc" />
+          </div>
+
+          <label for="cardHolder">Card Holder</label>
+          <input
+            type="text"
+            placeholder="First and Last Name"
+            id="cardHolder"
+          />
+
+          <label for="billingAddress">Billing Address</label>
+          <div class="billingAddress">
+            <input type="text" placeholder="Street" id="street" />
+            <input type="text" placeholder="City" id="city" />
+            <input type="text" placeholder="Zip Code" id="zipCode" />
+          </div>
         </form>
-        <p>Card Details</p>
-        <div class="cardDetails">
-          <form>
-            <img src="icons/card.svg" alt="" />
-            <label for="cardDetails">Card Number</label>
-          </form>
-          <form>
-            <label for="cardDetails">MM / YY</label>
-          </form>
-          <form>
-            <label for="cardDetails">CVC</label>
-          </form>
-        </div>
-        <p>Card Holder</p>
-        <form>
-          <img src="icons/user.svg" alt="" />
-          <label for="cardHolder">First and Last Name</label>
-        </form>
-        <p>Billing Address</p>
-        <div class="billingAddress">
-          <form>
-            <label for="billingAddress">Street</label>
-          </form>
-          <form>
-            <label for="billingAddress">City</label>
-          </form>
-          <form>
-            <label for="billingAddress">Zip Code</label>
-          </form>
-        </div>
         <div class="totalPay">
-          <h2>Total:</h2>
-          <h2>$20</h2>
+          <h2 class="totalPayment">Total:</h2>
+          <h2 class="totalPaymentDollar">$20</h2>
         </div>
-        <a href="">
+        <a class="payButton" href="">
           <button type="button" class="pay">
             <p>Pay $20</p>
           </button></a
