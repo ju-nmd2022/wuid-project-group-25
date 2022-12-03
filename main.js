@@ -278,15 +278,37 @@ const howToHeader = document.getElementById("howToHeader");
 const howTo = document.getElementById("howTo");
 const clock = document.getElementById("clock");
 const close = document.getElementById("close");
+const shoppingCartBall = document.getElementById("shoppingCartBall");
+const addToShoppingCartBtn = document.getElementById("addToShoppingCart");
+const shoppingCartText = document.getElementById("shoppingCartText");
+
+const cartMealParent = document.getElementById("cartMeal");
+const cartMealImage = document.getElementById("cartMealImage");
+const cartMealName = document.getElementById("cartMealName");
+const cartMealMoney = document.getElementById("cartMealMoney");
+const cartMealP = document.getElementById("cartMealP");
+
+const summaryOrderInfo = document.getElementById("summaryOrderInfo");
+const summaryOrderImage = document.getElementById("summaryOrderImage");
+const summaryOrderName = document.getElementById("summaryOrderName");
+const summaryOrderMoney = document.getElementById("summaryOrderMoney");
+
+const totalPrice = document.getElementById("totalPrice");
+const payTotalPrice = document.getElementById("payTotalPrice");
 
 const starSolid = "icons/starSolid.svg";
 const starOutlined = "icons/star.svg";
+
+const CART_KEY = "cartKey";
 
 // Minimum characters requierd before search fiters results
 const SEARCH_MINIMUM_CHAR_COUNT = 3;
 
 // To place all meal cards on website
 function spawnCard(meal) {
+  if (cards == null) {
+    return;
+  }
   const card = `<div id="${meal.id}" class="swedishBreakfast">
 <img
   src="${meal.image}"
@@ -318,6 +340,15 @@ function spawnCard(meal) {
 
 // Contains all meal items
 let listOfMeals = [meal3, meal6, meal9, meal12];
+let cart = [];
+
+let currentMeal;
+let currentMealId = "";
+let cartMeal;
+let cartMealId = "";
+getSessionStorage();
+updateCart();
+updateSummary();
 
 // Display all meals as cards on website
 listOfMeals.forEach((meal) => {
@@ -327,29 +358,44 @@ listOfMeals.forEach((meal) => {
 
 listOfMeals.forEach((meal) => {
   let element = document.getElementById(meal.id);
+  if (element == null) {
+    return;
+  }
   element.addEventListener("click", function () {
     clickedMeal(meal);
   });
 });
+
+function getSessionStorage() {
+  let m = sessionStorage.getItem(CART_KEY);
+  if (m != null) {
+    cartMealId = m;
+    cartMeal = listOfMeals.find((meal) => meal.id == cartMealId);
+    console.log(cartMeal);
+  }
+}
 
 // #region search bar
 
 // Makes the search bar functional.
 
 // The following 6 lines of code was adapted from https://javascript.plainenglish.io/how-to-build-a-search-bar-7d8a8a3d9d00 20022-11-26
-searchInput.addEventListener("keyup", (event) => {
-  const { value } = event.target;
 
-  // Transforms all letters to lowercase.
-  const searchQuery = value.toLowerCase();
+if (searchInput != null) {
+  searchInput.addEventListener("keyup", (event) => {
+    const { value } = event.target;
 
-  // If three letters or more is written - a meal will appear on the screen. If not, all meals will be shown, this is also for when you remove letters.
-  if (searchQuery.length >= SEARCH_MINIMUM_CHAR_COUNT) {
-    listOfMeals.forEach((meal) => doesMealMatchSearch(meal, searchQuery));
-  } else {
-    listOfMeals.forEach((meal) => showMeal(meal));
-  }
-});
+    // Transforms all letters to lowercase.
+    const searchQuery = value.toLowerCase();
+
+    // If three letters or more is written - a meal will appear on the screen. If not, all meals will be shown, this is also for when you remove letters.
+    if (searchQuery.length >= SEARCH_MINIMUM_CHAR_COUNT) {
+      listOfMeals.forEach((meal) => doesMealMatchSearch(meal, searchQuery));
+    } else {
+      listOfMeals.forEach((meal) => showMeal(meal));
+    }
+  });
+}
 
 // Looks if the letters match with the meals, shows the meals it matches with and hides the other ones.
 function doesMealMatchSearch(meal, searchString) {
@@ -377,6 +423,9 @@ function showMeal(meal) {
 
 // Iactivates/activates stars in meal cards
 function setStars(meal) {
+  if (cards == null) {
+    return;
+  }
   const parent = document.getElementById(meal.id);
   const star1 = parent.querySelector("#" + meal.id + "star1");
   const star2 = parent.querySelector("#" + meal.id + "star2");
@@ -412,8 +461,11 @@ function setStars(meal) {
 }
 
 hideDetails();
+updateShoppingCartBall();
 
 function clickedMeal(meal) {
+  currentMeal = meal;
+  currentMealId = meal.id;
   let oldIngredients = document.querySelectorAll(".ingredientItem");
   let oldServeWith = document.querySelectorAll(".serveWithItem");
 
@@ -446,16 +498,79 @@ function clickedMeal(meal) {
   showDetails();
 }
 
-close.addEventListener("click", function () {
-  hideDetails();
-});
+if (close != null) {
+  close.addEventListener("click", function () {
+    hideDetails();
+  });
+}
+
+if (addToShoppingCartBtn != null) {
+  addToShoppingCartBtn.addEventListener("click", function () {
+    cartMealId = currentMealId;
+    cartMeal = currentMeal;
+    updateSessionStorage();
+    updateShoppingCartBall();
+  });
+}
+
+function updateSessionStorage() {
+  sessionStorage.setItem(CART_KEY, cartMealId);
+}
 
 function hideDetails() {
-  details.style.display = "none";
-  detailsBackground.style.display = "none";
+  if (details != null) {
+    details.style.display = "none";
+    detailsBackground.style.display = "none";
+  }
 }
 
 function showDetails() {
   details.style.display = "block";
   detailsBackground.style.display = "block";
+}
+
+function showShoppingCartBall() {
+  shoppingCartBall.style.display = "flex";
+}
+
+function hideShoppingCartBall() {
+  shoppingCartBall.style.display = "none";
+}
+
+function updateShoppingCartBall() {
+  if (cartMealId != null && cartMealId != "") {
+    shoppingCartText.innerHTML = 1;
+    showShoppingCartBall();
+  } else {
+    hideShoppingCartBall();
+  }
+}
+
+function updateCart() {
+  if (cartMealParent == null) {
+    return;
+  }
+  if (cartMeal != null) {
+    cartMealParent.style.display = "flex";
+    cartMealImage.src = cartMeal.image;
+    cartMealName.innerHTML = cartMeal.name;
+    cartMealMoney.innerHTML = "$" + cartMeal.price;
+    cartMealP.innerHTML = "$" + cartMeal.price;
+  } else {
+    cartMealParent.style.display = "none";
+  }
+}
+
+function updateSummary() {
+  if (summaryOrderInfo == null) {
+    return;
+  }
+  if (cartMeal != null) {
+    summaryOrderInfo.style.display = "flex";
+    summaryOrderImage.src = cartMeal.image;
+    summaryOrderName.innerHTML = cartMeal.name;
+    summaryOrderMoney.innerHTML = "$" + cartMeal.price;
+    totalPrice.innerHTML = "$" + cartMeal.price;
+    payTotalPrice.innerHTML = "Pay $" + cartMeal.price;
+  }
 }
