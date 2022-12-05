@@ -209,6 +209,11 @@ button img {
   width: 22rem;
 }
 
+.cardImage {
+  height: calc(22rem * 0.62);
+  object-fit: cover;
+}
+
 .swedishBreakfast h1 {
   font-family: "Inter", sans-serif;
   font-size: 1.5rem;
@@ -333,6 +338,8 @@ h3 .detailsBackground {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   width: 40rem;
+  height: calc(40rem * 0.62);
+  object-fit: cover;
 }
 
 .clock {
@@ -990,6 +997,11 @@ hr {
 
   .swedishBreakfast img {
     width: 100%;
+  }
+
+  .cardImage {
+    height: calc(100% * 0.62);
+    object-fit: cover;
   }
 
   .time img {
