@@ -37,13 +37,7 @@
             </li>
 
             <li>
-              <a class="active" href="index.html"
-                >Recipes
-                <img
-                  class="chevron"
-                  src="icons/chevron.svg"
-                  alt="A Chevron pointing down"
-              /></a>
+              <a class="active" href="index.html">Recipes </a>
             </li>
             <li>
               <a>How</a>
@@ -63,66 +57,110 @@
         </nav>
       </div>
 
-      <div class="paymentPage">
-        <div class="summaryOrder">
-          <h1>Summary Order</h1>
-          <hr />
-          <div id="summaryOrderInfo" class="summaryOrderInfo">
-            <img
-              id="summaryOrderImage"
-              src="images/potatoPancakes.jpeg"
-              alt=""
-            />
-            <h2 id="summaryOrderName" class="summaryOrderName">
-              Potato pancakes with lingonberries
-            </h2>
-          </div>
-          <h2 id="summaryOrderMoney" class="money">$10</h2>
-          <hr />
-        </div>
+      <nav class="mobileNav">
+        <ul>
+          <li>
+            <a id="hamburgerMenu" class="hamburgerMenu"
+              ><img src="icons/hamburger.svg" alt="A hamburger menu"
+            /></a>
+          </li>
+          <li>
+            <a class="logo" href="index.html">
+              <img
+                src="images/logo.png"
+                alt="A logo containing a kitchen hat, a fork, a knife and the company name Cuisines with Culture"
+              />
+            </a>
+          </li>
+
+          <li class="shoppingCartParent">
+            <div id="shoppingCartBallMobile">
+              <p id="shoppingCartTextMobile">5</p>
+            </div>
+            <a class="shoppingCart" href="shoppingCart.html"
+              ><img src="icons/shoppingcart.svg" alt="Shopping Cart"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="hamburgerMenuOptions">
+        <ul>
+          <li>
+            <a class="active" href="index.html">Recipes </a>
+          </li>
+          <li>
+            <a>How</a>
+          </li>
+          <li>
+            <a>Get help</a>
+          </li>
+        </ul>
       </div>
-      <div class="paymentDetails">
-        <h1>Payment Details</h1>
-        <p class="infoText">
-          Complete your purchase by providing your payment details.
-        </p>
-        <form action="submit">
-          <label for="emailAddress">Email Address</label>
-          <input
-            type="email"
-            placeholder="annanadersson@hotmail.com"
-            id="emailAddress"
-          />
-          <label for="cardNumber">Card Number</label>
-          <div class="cardNumber">
-            <input type="text" placeholder="Card Number" id="number" />
-            <input type="text" placeholder="MM / YY" id="exDate" />
-            <input type="text" placeholder="CVC" id="cvc" />
+      <div class="paymentFlex">
+        <div class="payment">
+          <div class="paymentPage">
+            <div class="summaryOrder">
+              <h1>Summary Order</h1>
+              <hr />
+              <div id="summaryOrderInfo" class="summaryOrderInfo">
+                <img
+                  id="summaryOrderImage"
+                  src="images/potatoPancakes.jpeg"
+                  alt=""
+                />
+                <h2 id="summaryOrderName" class="summaryOrderName">
+                  Potato pancakes with lingonberries
+                </h2>
+              </div>
+              <h2 id="summaryOrderMoney" class="money">$10</h2>
+              <hr />
+            </div>
           </div>
+          <div class="paymentDetails">
+            <h1>Payment Details</h1>
+            <p class="infoText">
+              Complete your purchase by providing your payment details.
+            </p>
+            <form action="submit">
+              <label for="emailAddress">Email Address</label>
+              <input
+                type="email"
+                placeholder="annanadersson@hotmail.com"
+                id="emailAddress"
+              />
+              <label for="cardNumber">Card Number</label>
+              <div class="cardNumber">
+                <input type="text" placeholder="Card Number" id="number" />
+                <input type="text" placeholder="MM / YY" id="exDate" />
+                <input type="text" placeholder="CVC" id="cvc" />
+              </div>
 
-          <label for="cardHolder">Card Holder</label>
-          <input
-            type="text"
-            placeholder="First and Last Name"
-            id="cardHolder"
-          />
+              <label for="cardHolder">Card Holder</label>
+              <input
+                type="text"
+                placeholder="First and Last Name"
+                id="cardHolder"
+              />
 
-          <label for="billingAddress">Billing Address</label>
-          <div class="billingAddress">
-            <input type="text" placeholder="Street" id="street" />
-            <input type="text" placeholder="City" id="city" />
-            <input type="text" placeholder="Zip Code" id="zipCode" />
+              <label for="billingAddress">Billing Address</label>
+              <div class="billingAddress">
+                <input type="text" placeholder="Street" id="street" />
+                <input type="text" placeholder="City" id="city" />
+                <input type="text" placeholder="Zip Code" id="zipCode" />
+              </div>
+            </form>
+            <div class="totalPay">
+              <h2 class="totalPayment">Total:</h2>
+              <h2 id="totalPrice" class="totalPaymentDollar">$20</h2>
+            </div>
+            <a class="payButton" href="successful.html">
+              <button type="button" class="pay">
+                <p id="payTotalPrice">Pay $20</p>
+              </button></a
+            >
           </div>
-        </form>
-        <div class="totalPay">
-          <h2 class="totalPayment">Total:</h2>
-          <h2 id="totalPrice" class="totalPaymentDollar">$20</h2>
         </div>
-        <a class="payButton" href="successful.html">
-          <button type="button" class="pay">
-            <p id="payTotalPrice">Pay $20</p>
-          </button></a
-        >
       </div>
       <footer class="flexbox"></footer>
     </main>

@@ -30,13 +30,7 @@
               /></a>
             </li>
             <li>
-              <a href="index.html"
-                >Recipes
-                <img
-                  class="chevron"
-                  src="icons/chevron.svg"
-                  alt="A Chevron pointing down"
-              /></a>
+              <a href="index.html">Recipes </a>
             </li>
             <li>
               <a>How</a>
@@ -54,6 +48,47 @@
             </li>
           </ul>
         </nav>
+      </div>
+
+      <nav class="mobileNav">
+        <ul>
+          <li>
+            <a id="hamburgerMenu" class="hamburgerMenu"
+              ><img src="icons/hamburger.svg" alt="A hamburger menu"
+            /></a>
+          </li>
+          <li>
+            <a class="logo" href="index.html">
+              <img
+                src="images/logo.png"
+                alt="A logo containing a kitchen hat, a fork, a knife and the company name Cuisines with Culture"
+              />
+            </a>
+          </li>
+
+          <li class="shoppingCartParent">
+            <div id="shoppingCartBallMobile">
+              <p id="shoppingCartTextMobile">5</p>
+            </div>
+            <a class="shoppingCart" href="shoppingCart.html"
+              ><img src="icons/shoppingcartGreen.svg" alt="Shopping Cart"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="hamburgerMenuOptions">
+        <ul>
+          <li>
+            <a class="active" href="index.html">Recipes </a>
+          </li>
+          <li>
+            <a>How</a>
+          </li>
+          <li>
+            <a>Get help</a>
+          </li>
+        </ul>
       </div>
 
       <div class="shoppingCartSite">
@@ -93,7 +128,7 @@
         </div>
         <div class="total">
           <h2 class="totalAmount">Total:</h2>
-          <h2 class="totalDollars">$20</h2>
+          <h2 id="totalDollars" class="totalDollars">$20</h2>
           <a href="payment.html">
             <button type="button" class="checkOut">
               <p>Proceed to checkout</p>

@@ -279,8 +279,14 @@ const howTo = document.getElementById("howTo");
 const clock = document.getElementById("clock");
 const close = document.getElementById("close");
 const shoppingCartBall = document.getElementById("shoppingCartBall");
+const shoppingCartBallMobile = document.getElementById(
+  "shoppingCartBallMobile"
+);
 const addToShoppingCartBtn = document.getElementById("addToShoppingCart");
 const shoppingCartText = document.getElementById("shoppingCartText");
+const shoppingCartTextMobile = document.getElementById(
+  "shoppingCartTextMobile"
+);
 
 const cartMealParent = document.getElementById("cartMeal");
 const cartMealImage = document.getElementById("cartMealImage");
@@ -295,6 +301,10 @@ const summaryOrderMoney = document.getElementById("summaryOrderMoney");
 
 const totalPrice = document.getElementById("totalPrice");
 const payTotalPrice = document.getElementById("payTotalPrice");
+const totalDollars = document.getElementById("totalDollars");
+
+const hamburgerMenuOptions = document.getElementById("hamburgerMenuOptions");
+const hamburgerMenu = document.getElementById("hamburgerMenu");
 
 const starSolid = "icons/starSolid.svg";
 const starOutlined = "icons/star.svg";
@@ -342,6 +352,7 @@ function spawnCard(meal) {
 let listOfMeals = [meal3, meal6, meal9, meal12];
 let cart = [];
 
+let toggleHamburgerMenu = false;
 let currentMeal;
 let currentMealId = "";
 let cartMeal;
@@ -460,6 +471,7 @@ function setStars(meal) {
   }
 }
 
+hideHamburgerMenuOptions();
 hideDetails();
 updateShoppingCartBall();
 
@@ -517,6 +529,15 @@ function updateSessionStorage() {
   sessionStorage.setItem(CART_KEY, cartMealId);
 }
 
+hamburgerMenu.addEventListener("click", function () {
+  toggleHamburgerMenu = !toggleHamburgerMenu;
+  if (toggleHamburgerMenu == true) {
+    showHamburgerMenuOptions();
+  } else {
+    hideHamburgerMenuOptions();
+  }
+});
+
 function hideDetails() {
   if (details != null) {
     details.style.display = "none";
@@ -530,19 +551,46 @@ function showDetails() {
 }
 
 function showShoppingCartBall() {
-  shoppingCartBall.style.display = "flex";
+  if (shoppingCartBall != null) {
+    shoppingCartBall.style.display = "flex";
+  }
 }
 
 function hideShoppingCartBall() {
   shoppingCartBall.style.display = "none";
 }
 
+function showShoppingCartBallMobile() {
+  if (shoppingCartBallMobile != null) {
+    shoppingCartBallMobile.style.display = "flex";
+  }
+}
+
+function hideShoppingCartBallMobile() {
+  shoppingCartBallMobile.style.display = "none";
+}
+
+function showHamburgerMenuOptions() {
+  hamburgerMenuOptions.style.display = "inline-block";
+}
+
+function hideHamburgerMenuOptions() {
+  hamburgerMenuOptions.style.display = "none";
+}
+
 function updateShoppingCartBall() {
   if (cartMealId != null && cartMealId != "") {
-    shoppingCartText.innerHTML = 1;
+    if (shoppingCartText != null) {
+      shoppingCartText.innerHTML = 1;
+    }
+    if (shoppingCartTextMobile != null) {
+      shoppingCartTextMobile.innerHTML = 1;
+    }
     showShoppingCartBall();
+    showShoppingCartBallMobile();
   } else {
     hideShoppingCartBall();
+    hideShoppingCartBallMobile();
   }
 }
 
@@ -572,5 +620,8 @@ function updateSummary() {
     summaryOrderMoney.innerHTML = "$" + cartMeal.price;
     totalPrice.innerHTML = "$" + cartMeal.price;
     payTotalPrice.innerHTML = "Pay $" + cartMeal.price;
+    if (totalDollars != null) {
+      totalDollars.innerHTML = "$" + cartMeal.price;
+    }
   }
 }
