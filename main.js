@@ -28,18 +28,34 @@ let meal = {
 
 let meal2 = {
   id: "meal2",
-  name: "Name of dish",
-  description: "Description of dish",
-  image: "Path to image",
-  stars: "How many stars, integer without quotation marks",
-  timeToCook: "Time in hours and minutes",
-  price: "Price, integer without quotiation marks",
-  dishDescription: "A longer description of the dish",
-  ingredients:
-    "List all ingredients needed. Write them inside [] and quotation marks between each ingredient",
-  serveWith:
-    "List some serving tips. Write them inside [] and quotation marks between each tip",
-  howTo: "How to make the dish",
+  name: "Traditional Romanian Breakfast",
+  description:
+    "The Romanian breakfast includes a selection of cold and hot dishes. As the traditional Romanian cuisine has been influenced during the history, each region of the country has its own variation of breakfast, with some common elements.",
+  image: "images/romanianBreakfast.jpg",
+  stars: 3,
+  timeToCook: "10 min",
+  price: 3,
+  dishDescription:
+    "One egg, as many vegetables as you like, cheese, one slice of toast, and any kind of meat, ideally pork, make up the traditional Romanian breakfast.",
+  ingredients: [
+    "1 egg",
+    "3 spoons zacusca",
+    "1 slice of bread",
+    "3 slices smoked ham",
+    "1 tomato",
+    "2-3 slices cucumber",
+    "1 spring onion",
+    "cheese",
+  ],
+
+  serveWith: [
+    "Commonly used vegetables for breakfast is cucumber, bell pepper, tomatoes and onions",
+    "Since practically every Romanian meal contains garlic, you can also add some garlic to the bread and vegetables.",
+  ],
+
+  howTo:
+    "Fry, poach or boil the egg, arrange all the items on the plate and then enjoy your very romanian breakfast!",
+
   hidden: false,
 };
 
@@ -47,7 +63,7 @@ let meal3 = {
   id: "meal3",
   name: "Traditional Swedish Breakfast",
   description:
-    "The Swedish breakfast consits of two slices of bread with butter and cheese, a boiled egg...",
+    "The Swedish breakfast consits of two slices of bread with butter and cheese, a boiled egg",
   image: "images/SwedishBreakfast.png",
   stars: 4,
   timeToCook: "15 min",
@@ -110,18 +126,28 @@ let meal4 = {
 
 let meal5 = {
   id: "meal5",
-  name: "Name of dish",
-  description: "Description of dish",
-  image: "Path to image",
-  stars: "How many stars, integer without quotation marks",
-  timeToCook: "Time in hours and minutes",
-  price: "Price, integer without quotiation marks",
-  dishDescription: "A longer description of the dish",
-  ingredients:
-    "List all ingredients needed. Write them inside [] and quotation marks between each ingredient",
-  serveWith:
-    "List some serving tips. Write them inside [] and quotation marks between each tip",
-  howTo: "How to make the dish",
+  name: "Polenta with cheese and bacon",
+  description:
+    "One of the most well-liked and delicious meals ever is a this romanian dish, especially when served for lunch. You receive sufficient energy from this meal for the remainder of the day.",
+  image: "images/romanian lunch.jpg",
+  stars: 4,
+  timeToCook: "50 min",
+  price: 8,
+  dishDescription:
+    " This Traditional Romanian Polenta with Feta Cheese, Bacon and Sausage known as “Mămăligă cu Brânză în Pături” it is one of the most traditional and delocios meal of Romania. It’s healthy, tasty and satisfying.",
+  ingredients: [
+    "5 slices bacon (fried and chopped)",
+    "8 ounce smoked sausage (sliced and fried)",
+    "2 cups cornmeal",
+    "8 cups water",
+    "1 teaspoon salt",
+    "3 cups feta cheese (shredded or crumbled)",
+  ],
+
+  serveWith: ["Extra cheese or ham."],
+
+  howTo:
+    "Boil the water with salt. Once water is boiling, reduce heat to low and add the cornmeal, while stirring constantly. Keep stirring, you will notice the polenta will thicken.Cook the polenta for about 20 to 30 min, stirring occasionally. Preheat oven to 400 F degrees.In a 9 x 13 in baking dish, spread half of the polenta using some of the remaining bacon fat. Sprinkle with half of the feta cheese. Add all the sausage and half of the bacon.Repeat with another layer using the remaining polenta. Add the remaining cheese and top off with the remaining bacon.Bake for about 10 min. Serve warm.",
   hidden: false,
 };
 
@@ -129,7 +155,7 @@ let meal6 = {
   id: "meal6",
   name: "Potato pancakes with lingonberries",
   description:
-    "Potato pancakes, aka raggmunk, has been a classic Swedish meal since the early 20th...",
+    "Potato pancakes, aka raggmunk, has been a classic Swedish meal since the early 20th",
   image: "images/potatoPancakes.jpeg",
   stars: 3,
   timeToCook: "30 min",
@@ -183,18 +209,32 @@ let meal7 = {
 
 let meal8 = {
   id: "meal8",
-  name: "Name of dish",
-  description: "Description of dish",
-  image: "Path to image",
-  stars: "How many stars, integer without quotation marks",
-  timeToCook: "Time in hours and minutes",
-  price: "Price, integer without quotiation marks",
-  dishDescription: "A longer description of the dish",
-  ingredients:
-    "List all ingredients needed. Write them inside [] and quotation marks between each ingredient",
-  serveWith:
-    "List some serving tips. Write them inside [] and quotation marks between each tip",
-  howTo: "How to make the dish",
+  name: "Ribs with honey and paprika sauce",
+  description:
+    "Sticky, sweet & savory, caramelized, smoky goodness in every bite. Say hello to your new go-to romanian ribs recipe!",
+  image: "images/romanianRibs.jpg",
+  stars: 5,
+  timeToCook: "1 hour, 30 min",
+  price: 20,
+  dishDescription:
+    "Basted every 20 minutes with that sweet and smoky glaze, each bite will give you tender meat coated in a perfectly caramelized sauce. Since they are so simple to cook but so delicious to eat, these ribs have become very well-known in Romania in recent years. They are on the menus of all restaurants, and many of them are specialties.",
+  ingredients: [
+    "tablespoon honey",
+    "2 teaspoon brown sugar",
+    "⅓ cup olive oil",
+    "2 tablespoon lemon juice (freshly squeezed)",
+    "2 teaspoon salt",
+    "1 teaspoon pepper",
+    "4 cloves garlic (crushed)",
+    "2 teaspoon paprika",
+    "2 tablespoon oregano",
+    "1 tablespoon yellow mustard",
+    "2 racks pork ribs (3 to 4 lbs)",
+  ],
+
+  serveWith: ["Best served with french fries and rose sauce"],
+  howTo:
+    "Prep the ribs: Remove the membrane or silverskin from the bottom side of the ribs. Flip over the rib rack so you are looking at the bottom side (the side without the meat.) Go to one end of the rib rack, using a knife slide it under the silverskin and pull. It should peel right off in one swipe. Set aside.Glaze: Preheat oven to 375 F degrees. Mix all of the glaze ingredients together in a large bowl. Place the ribs on a large roaster fitted with a rack and then brush the glaze all over the pork ribs thoroughly on both sides. If there's any of the glaze left over, just pour it over the ribs.Cook: Add 1/2 inch of water to the bottom of the roasting pan and transfer the roasting pan to the oven. Bake in the oven for about 1 hour and a half. Every 20 minutes or so, baste the ribs with the drippings from the pan. If the ribs start to brown too much, cover them with foil and finish cooking them.Let the ribs rest for 5 to 10 minutes before serving.",
   hidden: false,
 };
 
@@ -273,18 +313,31 @@ let meal10 = {
 
 let meal11 = {
   id: "meal11",
-  name: "Name of dish",
-  description: "Description of dish",
-  image: "Path to image",
-  stars: "How many stars, integer without quotation marks",
-  timeToCook: "Time in hours and minutes",
-  price: "Price, integer without quotiation marks",
-  dishDescription: "A longer description of the dish",
-  ingredients:
-    "List all ingredients needed. Write them inside [] and quotation marks between each ingredient",
-  serveWith:
-    "List some serving tips. Write them inside [] and quotation marks between each tip",
-  howTo: "How to make the dish",
+  name: "Papanași",
+  description:
+    "A traditional flavor belonging to Romanian Cuisine: Papanasi Dessert. Get ready for the dessert feast with uniquely fried cheese donuts served with sour cream and jam!",
+  image: "images/romanianPapanasi.jpg",
+  stars: 5,
+  timeToCook: "1 hour",
+  price: 12,
+  dishDescription:
+    "Papanasi is a fruity dessert prepared by frying or boiling. It is a recipe specific to Romanian and Moldovan cuisines. If you like the sour-sweet combination in desserts, you should definitely try this recipe.This donut, whose main ingredient is cheese, is prepared with cottage cheese, smetana cream and jam. It is also known as Romanian Cheese Donuts.The Papanasi recipe, prepared by frying and flavored with sour fruit flavors, appeals to both the eyes and your palate. Prepare the necessary ingredients for this easy-to-prepare fried donut and try this dessert, which will be indispensable for dessert crises. Bon Appetit.",
+  ingredients: [
+    "2 egg",
+    "1/2 teaspoon of vanilla extract",
+    "2 cups of flour",
+    "1 pound of cottage cheese",
+    "1/2 cup of powdered sugar",
+    "1/2 tablespoon of baking soda",
+    "2 cups of olive oil",
+    "1 tablespoon of zest lemon",
+    "12 tablespoons of sour cream",
+    "1 cup of blueberry jam",
+  ],
+
+  serveWith: ["Serve with creme freche and jam of any kind"],
+  howTo:
+    "Drain the excess water from the cottage cheese. Then put the cheese in a large bowl. Grind the cheese.In a separate bowl, mix the eggs and sugar with a hand blender until the sugar is well melted.Add the lemon zest, vanilla extract and cheese to the sugar mixture. Mix all the ingredients.Mix the flour and baking powder in a bowl. Then add the flour mix and combine with the ingredients with the help of a spatula until you get a smooth dough.Knead the dough and roll it into a ball. Let the dough stand for 15-20 minutes.After resting the dough, sprinkle flour on the counter and put the dough on it.Divide the dough into 9 equal parts. Shape each of the 8 pieces of dough into a donut with a hole in the middle. Prepare 8 small balls of dough with the remaining piece of dough. Prepare dough with a middle hole in 6 cm thickness and small ball dough in 3 cm thickness.Add the oil in a pot and heat the oil over low-medium heat. When the oil is heated, fry both sides of the donut and dough ball over medium heat for 3-4 minutes. When it turns golden brown, remove it from the pan and place it on a serving plate.Fry the remaining dough in the same way.Serve with sour cream and cherry jam.",
   hidden: false,
 };
 
@@ -339,23 +392,56 @@ const howToHeader = document.getElementById("howToHeader");
 const howTo = document.getElementById("howTo");
 const clock = document.getElementById("clock");
 const close = document.getElementById("close");
+const shoppingCartBall = document.getElementById("shoppingCartBall");
+const shoppingCartBallMobile = document.getElementById(
+  "shoppingCartBallMobile"
+);
+const addToShoppingCartBtn = document.getElementById("addToShoppingCart");
+const shoppingCartText = document.getElementById("shoppingCartText");
+const shoppingCartTextMobile = document.getElementById(
+  "shoppingCartTextMobile"
+);
+
+const cartMealParent = document.getElementById("cartMeal");
+const cartMealImage = document.getElementById("cartMealImage");
+const cartMealName = document.getElementById("cartMealName");
+const cartMealMoney = document.getElementById("cartMealMoney");
+const cartMealP = document.getElementById("cartMealP");
+
+const summaryOrderInfo = document.getElementById("summaryOrderInfo");
+const summaryOrderImage = document.getElementById("summaryOrderImage");
+const summaryOrderName = document.getElementById("summaryOrderName");
+const summaryOrderMoney = document.getElementById("summaryOrderMoney");
+
+const totalPrice = document.getElementById("totalPrice");
+const payTotalPrice = document.getElementById("payTotalPrice");
+const totalDollars = document.getElementById("totalDollars");
+
+const hamburgerMenuOptions = document.getElementById("hamburgerMenuOptions");
+const hamburgerMenu = document.getElementById("hamburgerMenu");
 
 const starSolid = "icons/starSolid.svg";
 const starOutlined = "icons/star.svg";
+
+const CART_KEY = "cartKey";
 
 // Minimum characters requierd before search fiters results
 const SEARCH_MINIMUM_CHAR_COUNT = 3;
 
 // To place all meal cards on website
 function spawnCard(meal) {
+  if (cards == null) {
+    return;
+  }
   const card = `<div id="${meal.id}" class="swedishBreakfast">
-<img
+<img 
+  class="cardImage"
   src="${meal.image}"
   alt="Swedish breakfast with hardbread, eggs and coffee."
 />
 <h1>${meal.name}</h1>
 <p class="description">
-  ${meal.description}
+  ${meal.description.slice(0, 100)} 
 </p>
 
 <div class="time">
@@ -378,7 +464,17 @@ function spawnCard(meal) {
 }
 
 // Contains all meal items
-let listOfMeals = [meal3, meal6, meal9, meal12];
+let listOfMeals = [meal2, meal3, meal5, meal6, meal8, meal9, meal11, meal12];
+let cart = [];
+
+let toggleHamburgerMenu = false;
+let currentMeal;
+let currentMealId = "";
+let cartMeal;
+let cartMealId = "";
+getSessionStorage();
+updateCart();
+updateSummary();
 
 // Display all meals as cards on website
 listOfMeals.forEach((meal) => {
@@ -388,29 +484,44 @@ listOfMeals.forEach((meal) => {
 
 listOfMeals.forEach((meal) => {
   let element = document.getElementById(meal.id);
+  if (element == null) {
+    return;
+  }
   element.addEventListener("click", function () {
     clickedMeal(meal);
   });
 });
+
+function getSessionStorage() {
+  let m = sessionStorage.getItem(CART_KEY);
+  if (m != null) {
+    cartMealId = m;
+    cartMeal = listOfMeals.find((meal) => meal.id == cartMealId);
+    console.log(cartMeal);
+  }
+}
 
 // #region search bar
 
 // Makes the search bar functional.
 
 // The following 6 lines of code was adapted from https://javascript.plainenglish.io/how-to-build-a-search-bar-7d8a8a3d9d00 20022-11-26
-searchInput.addEventListener("keyup", (event) => {
-  const { value } = event.target;
 
-  // Transforms all letters to lowercase.
-  const searchQuery = value.toLowerCase();
+if (searchInput != null) {
+  searchInput.addEventListener("keyup", (event) => {
+    const { value } = event.target;
 
-  // If three letters or more is written - a meal will appear on the screen. If not, all meals will be shown, this is also for when you remove letters.
-  if (searchQuery.length >= SEARCH_MINIMUM_CHAR_COUNT) {
-    listOfMeals.forEach((meal) => doesMealMatchSearch(meal, searchQuery));
-  } else {
-    listOfMeals.forEach((meal) => showMeal(meal));
-  }
-});
+    // Transforms all letters to lowercase.
+    const searchQuery = value.toLowerCase();
+
+    // If three letters or more is written - a meal will appear on the screen. If not, all meals will be shown, this is also for when you remove letters.
+    if (searchQuery.length >= SEARCH_MINIMUM_CHAR_COUNT) {
+      listOfMeals.forEach((meal) => doesMealMatchSearch(meal, searchQuery));
+    } else {
+      listOfMeals.forEach((meal) => showMeal(meal));
+    }
+  });
+}
 
 // Looks if the letters match with the meals, shows the meals it matches with and hides the other ones.
 function doesMealMatchSearch(meal, searchString) {
@@ -438,6 +549,9 @@ function showMeal(meal) {
 
 // Iactivates/activates stars in meal cards
 function setStars(meal) {
+  if (cards == null) {
+    return;
+  }
   const parent = document.getElementById(meal.id);
   const star1 = parent.querySelector("#" + meal.id + "star1");
   const star2 = parent.querySelector("#" + meal.id + "star2");
@@ -472,20 +586,37 @@ function setStars(meal) {
   }
 }
 
+hideHamburgerMenuOptions();
 hideDetails();
+updateShoppingCartBall();
 
 function clickedMeal(meal) {
+  currentMeal = meal;
+  currentMealId = meal.id;
+  let oldIngredients = document.querySelectorAll(".ingredientItem");
+  let oldServeWith = document.querySelectorAll(".serveWithItem");
+
+  oldIngredients.forEach((ingredientItem) => {
+    ingredientItem.remove();
+  });
+
+  oldServeWith.forEach((serveWithItem) => {
+    serveWithItem.remove();
+  });
+
   dishDescription.innerText = meal.dishDescription;
   detailsName.innerText = meal.name;
   image.src = meal.image;
   meal.ingredients.forEach((ingredient) => {
     /* The following 3 lines of code was adapted from https://stackoverflow.com/questions/20673959/how-to-add-new-li-to-ul-onclick-with-javascript Accessed: 2022-11-29 */
     let li = document.createElement("li");
+    li.classList.add("ingredientItem");
     li.appendChild(document.createTextNode(ingredient));
     ingredients.appendChild(li);
   });
   meal.serveWith.forEach((item) => {
     let li = document.createElement("li");
+    li.classList.add("serveWithItem");
     li.appendChild(document.createTextNode(item));
     serveWith.appendChild(li);
   });
@@ -494,16 +625,118 @@ function clickedMeal(meal) {
   showDetails();
 }
 
-close.addEventListener("click", function () {
-  hideDetails();
+if (close != null) {
+  close.addEventListener("click", function () {
+    hideDetails();
+  });
+}
+
+if (addToShoppingCartBtn != null) {
+  addToShoppingCartBtn.addEventListener("click", function () {
+    cartMealId = currentMealId;
+    cartMeal = currentMeal;
+    updateSessionStorage();
+    updateShoppingCartBall();
+  });
+}
+
+function updateSessionStorage() {
+  sessionStorage.setItem(CART_KEY, cartMealId);
+}
+
+hamburgerMenu.addEventListener("click", function () {
+  toggleHamburgerMenu = !toggleHamburgerMenu;
+  if (toggleHamburgerMenu == true) {
+    showHamburgerMenuOptions();
+  } else {
+    hideHamburgerMenuOptions();
+  }
 });
 
 function hideDetails() {
-  details.style.display = "none";
-  detailsBackground.style.display = "none";
+  if (details != null) {
+    details.style.display = "none";
+    detailsBackground.style.display = "none";
+  }
 }
 
 function showDetails() {
   details.style.display = "block";
   detailsBackground.style.display = "block";
+}
+
+function showShoppingCartBall() {
+  if (shoppingCartBall != null) {
+    shoppingCartBall.style.display = "flex";
+  }
+}
+
+function hideShoppingCartBall() {
+  shoppingCartBall.style.display = "none";
+}
+
+function showShoppingCartBallMobile() {
+  if (shoppingCartBallMobile != null) {
+    shoppingCartBallMobile.style.display = "flex";
+  }
+}
+
+function hideShoppingCartBallMobile() {
+  shoppingCartBallMobile.style.display = "none";
+}
+
+function showHamburgerMenuOptions() {
+  hamburgerMenuOptions.style.display = "inline-block";
+}
+
+function hideHamburgerMenuOptions() {
+  hamburgerMenuOptions.style.display = "none";
+}
+
+function updateShoppingCartBall() {
+  if (cartMealId != null && cartMealId != "") {
+    if (shoppingCartText != null) {
+      shoppingCartText.innerHTML = 1;
+    }
+    if (shoppingCartTextMobile != null) {
+      shoppingCartTextMobile.innerHTML = 1;
+    }
+    showShoppingCartBall();
+    showShoppingCartBallMobile();
+  } else {
+    hideShoppingCartBall();
+    hideShoppingCartBallMobile();
+  }
+}
+
+function updateCart() {
+  if (cartMealParent == null) {
+    return;
+  }
+  if (cartMeal != null) {
+    cartMealParent.style.display = "flex";
+    cartMealImage.src = cartMeal.image;
+    cartMealName.innerHTML = cartMeal.name;
+    cartMealMoney.innerHTML = "$" + cartMeal.price;
+    cartMealP.innerHTML = "$" + cartMeal.price;
+  } else {
+    cartMealParent.style.display = "none";
+  }
+}
+
+function updateSummary() {
+  if (summaryOrderInfo == null) {
+    return;
+  }
+  if (cartMeal != null) {
+    summaryOrderInfo.style.display = "flex";
+    summaryOrderImage.src = cartMeal.image;
+    summaryOrderName.innerHTML = cartMeal.name;
+    summaryOrderMoney.innerHTML = "$" + cartMeal.price;
+    totalPrice.innerHTML = "$" + cartMeal.price;
+    payTotalPrice.innerHTML = "Pay $" + cartMeal.price;
+    if (totalDollars != null) {
+      totalDollars.innerHTML = "$" + cartMeal.price;
+    }
+  }
 }

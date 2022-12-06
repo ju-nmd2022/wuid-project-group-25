@@ -15,40 +15,80 @@
     <main class="container">
       <div class="header">
         <nav class="topnav">
-          <ul class="navBar">
-            <li>
-              <a class="hamburgerMenu" href=""
-                ><img src="icons/hamburger.svg" alt="A hamburger menu"
-              /></a>
-            </li>
-            <li id="search">
+          <div class="search">
+            <a class="logo" href="index.html">
+              <img
+                src="images/logo.png"
+                alt="A logo containing a kitchen hat, a fork, a knife and the company name Cuisines with Culture"
+              />
+            </a>
+            <div id="search">
               <input id="searchInput" type="text" placeholder="Search" />
               <button type="submit">
                 <img src="icons/search.svg" alt="A magnifying glass" />
               </button>
+            </div>
+          </div>
+          <ul class="navBar">
+            <li>
+              <a class="active" href="index.html">Recipes </a>
             </li>
             <li>
-              <a class="active" href="index.html"
-                >Recipes
-                <img
-                  class="chevron"
-                  src="icons/chevron.svg"
-                  alt="A Chevron pointing down"
-              /></a>
+              <a>How</a>
             </li>
             <li>
-              <a href="how.html">How</a>
+              <a>Get help</a>
             </li>
-            <li>
-              <a href="getHelp.html">Get help</a>
-            </li>
-            <li>
-              <a class="shoppingCart" href=""
+            <li class="shoppingCartParent">
+              <div id="shoppingCartBall">
+                <p id="shoppingCartText">5</p>
+              </div>
+              <a class="shoppingCart" href="shoppingCart.html"
                 ><img src="icons/shoppingcart.svg" alt="Shopping Cart"
               /></a>
             </li>
           </ul>
         </nav>
+      </div>
+      <nav class="mobileNav">
+        <ul>
+          <li>
+            <a id="hamburgerMenu" class="hamburgerMenu"
+              ><img src="icons/hamburger.svg" alt="A hamburger menu"
+            /></a>
+          </li>
+          <li>
+            <a class="logo" href="index.html">
+              <img
+                src="images/logo.png"
+                alt="A logo containing a kitchen hat, a fork, a knife and the company name Cuisines with Culture"
+              />
+            </a>
+          </li>
+
+          <li class="shoppingCartParent">
+            <div id="shoppingCartBallMobile">
+              <p id="shoppingCartTextMobile">5</p>
+            </div>
+            <a class="shoppingCart" href="shoppingCart.html"
+              ><img src="icons/shoppingcart.svg" alt="Shopping Cart"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="hamburgerMenuOptions">
+        <ul>
+          <li>
+            <a class="active" href="index.html">Recipes </a>
+          </li>
+          <li>
+            <a>How</a>
+          </li>
+          <li>
+            <a>Get help</a>
+          </li>
+        </ul>
       </div>
 
       <div class="content">
