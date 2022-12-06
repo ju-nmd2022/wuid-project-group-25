@@ -3,18 +3,26 @@
 // Creates all meals
 let meal = {
   id: "meal1",
-  name: "Name of dish",
-  description: "Description of dish",
-  image: "Path to image",
-  stars: "How many stars, integer without quotation marks",
-  timeToCook: "Time in hours and minutes",
-  price: "Price, integer without quotiation marks",
-  dishDescription: "A longer description of the dish",
-  ingredients:
-    "List all ingredients needed. Write them inside [] and quotation marks between each ingredient",
+  name: "Traditional Cypriot Breakfast",
+  description: "A typical cypriot breakfast that consists of toasted bread and fresh vegetables on the side.",
+  image: "images/cypriotBreakfast.jpeg",
+  stars: "4",
+  timeToCook: "10mins",
+  price: "8",
+  dishDescription: "A very simple yet tasty breakfast that almost everyone eats in Cyprus. It consists of toasted bread  with butter accompanied by fresh tomatoes,cucumbers and olives as well as slices of ham and cheese or hallumi.",
+  ingredients:[
+    "bread",
+    "butter",
+    "tomatoes",
+    "cucumbers",
+    "olives of your preference",
+    "hallumi",
+    "ham",
+    "any kind of cheese",
+  ],  
   serveWith:
-    "List some serving tips. Write them inside [] and quotation marks between each tip",
-  howTo: "How to make the dish",
+    "You can grill the hallumi cheese on a pan for extra flavour and have a side of yogurt to compliment the bread",
+  howTo: "Toast the bread, add all your favourite vegetables, make some tea or coffee and enjoy a simple and delicous traditional cypriot braekfast.",
   hidden: false,
 };
 
@@ -84,18 +92,35 @@ let meal3 = {
 
 let meal4 = {
   id: "meal4",
-  name: "Name of dish",
-  description: "Description of dish",
-  image: "Path to image",
-  stars: "How many stars, integer without quotation marks",
-  timeToCook: "Time in hours and minutes",
-  price: "Price, integer without quotiation marks",
-  dishDescription: "A longer description of the dish",
-  ingredients:
-    "List all ingredients needed. Write them inside [] and quotation marks between each ingredient",
-  serveWith:
-    "List some serving tips. Write them inside [] and quotation marks between each tip",
-  howTo: "How to make the dish",
+  name: "Koupepia",
+  description: "Koupepia are stuffed vine leaves with meat are very popular in Cyprus.",
+  image: "images/koupepia.jpeg",
+  stars: "5",
+  timeToCook: "1hr",
+  price: "20",
+  dishDescription: "This famous dish Koupepia are delicious rolls of meat covered by grape leaves served with greek yogurt. ",
+   ingredients: [
+      "300 gr. grape leaves (fresh or frozen)",
+      "1 kg minced meat of your choice",
+      "6-7tomatoes",
+      "2 onions finely chopped",
+      "3 juiced lemons",
+      "1 cup of rice",
+      "parsely",
+      "3 tbsp of dried mint leaves",
+      "1/2 cup olive oil",
+      "3 tsp of salt",
+      "3tsp of pepper",
+    ], 
+    serveWith: [
+      "Koupepia is perfectly served with yogurt berfore every bie, dip it in some greek yogurt for a hot and cold delicous sensation",
+    ],
+    howTo: [
+      "Mix well the minced meat with all the ingredients (without the leaves) with a spoon or your hands",
+      "After that, grap 2 spoons of the mixture and add it on a flat grape leaf and fold the two sides together inwards and start rolling to create a spring roll look",
+      "Once you finished with the grape leaves and the mixture, place them all in a pot,add some olive oil and lemon and the vegetable stock dissolved in warm water",
+      "Lastly, a plate that will cover the koupepia and to finish, pour some warm water until it reachers the plate and leave it to slowly cook. Wait for 40 minutes, then wait for another 10 minutes for them to cool and enjoy!",
+    ],
   hidden: false,
 };
 
@@ -153,18 +178,32 @@ let meal6 = {
 
 let meal7 = {
   id: "meal7",
-  name: "Name of dish",
-  description: "Description of dish",
-  image: "Path to image",
-  stars: "How many stars, integer without quotation marks",
-  timeToCook: "Time in hours and minutes",
-  price: "Price, integer without quotiation marks",
-  dishDescription: "A longer description of the dish",
-  ingredients:
-    "List all ingredients needed. Write them inside [] and quotation marks between each ingredient",
+  name: "Avgolemoni",
+  description: "A traditional cyprtiot soup served in the winter and during Easter.",
+  image: "images/avgolemoni.jpg",
+  stars: "5",
+  timeToCook: "1hr 30min ",
+  price: 15,
+  dishDescription: "This soup is created with eggs,lemon and rice, 3 ingredients combined together creating a delicious flavour.",
+  ingredients: [
+      "4 eggs",
+      "3 lemons",
+      "2 tbs salt",
+      "300g rice",
+      "chicken",
+    ]
+      ,
   serveWith:
-    "List some serving tips. Write them inside [] and quotation marks between each tip",
-  howTo: "How to make the dish",
+      "On a cold winter day, a warm soup of avgolemoni pairs great with a sliced of freshly warm bread.",
+  howTo: [
+     "Add water in a large pot and bring to a boil. Once boiled, add the chicken with a squeeze of half a lemon for flavour.",
+     "Set a timer for 45 minutes, when the timer is done, set it aside.",
+     "Remove the chicken from the stock and start shredding into pieces.",
+     "Bring the pot to a boil after removing the chicken and add the rice.",
+     "While its cooking, its time to start creating the main flavours of the soup.",
+     "Add some stock in a bowl with the lemon juice, then crack the eggs in a mixing bowl and slowly add the lemon mixture.",
+     "When you see it has foamed up a bit, you may add it to the pot and there you have a cypriot soup that will warm your heart.",
+    ],
   hidden: false,
 };
 
@@ -235,18 +274,40 @@ let meal9 = {
 
 let meal10 = {
   id: "meal10",
-  name: "Name of dish",
-  description: "Description of dish",
-  image: "Path to image",
-  stars: "How many stars, integer without quotation marks",
-  timeToCook: "Time in hours and minutes",
-  price: "Price, integer without quotiation marks",
-  dishDescription: "A longer description of the dish",
-  ingredients:
-    "List all ingredients needed. Write them inside [] and quotation marks between each ingredient",
-  serveWith:
-    "List some serving tips. Write them inside [] and quotation marks between each tip",
-  howTo: "How to make the dish",
+  name: "Loukoumades",
+  description: "Loukoumades are little fluffy sweet honey balls, deep fried to golden and crispy perfection.",
+  image: "images/loukoumades.jpeg",
+  stars: 5,
+  timeToCook: "1hr 30 min",
+  price: 15,
+  dishDescription: "Loukoumades are cypriot donuts and loved by everyone.",
+  ingredients: [
+    "8 grams of yeast",
+    "3tbsp of flour",
+    "1/4 cup of water",
+    "1 tsp of sugar",
+    "230 grams of all-purpose flour",
+    "1 cup of water",
+    "1/8 tsp of salt",
+    "olive/vegetable oil",
+    "honey/maple syrup",
+    "crushed walnuts",
+    "cinnamon"
+    ]
+      ,
+  serveWith: [
+    "These cypriot donuts are perfect with a cypriot cup of coffe.",
+    ]
+      ,
+  howTo: [
+    "Start by dissolving the yeast with warm water, sugar and 3 table spoons of flour, cover it and set aside.",
+    "Add the rest of the ingredients together in a moxing bowl and mix them all togethe and cover with a table cloth.",
+    "Add the oil in a pot so you can deep fry the donuts.",
+    "Your dough should be flully anf bouncy now.",
+    "Start scooping a good amount of dough and make small balls.",
+    "Add them to the fryer, once they turn brown, they are finished.",
+    "Once all are done, add some honey on top with crushed walnuts and cinnamon or if you want something more simple, add powdered sugar. Enjoy!",
+    ],
   hidden: false,
 };
 
