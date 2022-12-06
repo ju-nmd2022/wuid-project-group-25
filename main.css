@@ -175,6 +175,52 @@ button img {
   width: 100%;
 }
 
+.seeRecipes a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.seeRecipes {
+  z-index: 1;
+  width: 30%;
+  background-color: #50c878;
+  height: 3rem;
+  border-radius: 0.5rem;
+  margin-top: 4rem;
+  position: fixed;
+}
+
+.firstPage {
+  display: flex;
+  justify-content: center;
+  margin-top: calc(50vh - 0.5rem);
+}
+
+.headline {
+  width: 50%;
+  margin-top: 10rem;
+  display: block;
+}
+
+.headline h1 {
+  margin-left: calc(50% / 2);
+  font-size: 2rem;
+}
+
+.headline p {
+  font-size: 1rem;
+  color: #000000;
+}
+
+.background img {
+  width: 100vw;
+  height: 60vh;
+  object-fit: cover;
+  position: fixed;
+  top: 4.75rem;
+  left: 0;
+}
 /*#region style meal cards*/
 
 .cards {
@@ -463,7 +509,8 @@ h1 {
 
 #addToShoppingCart p,
 .checkOut p,
-.pay p {
+.pay p,
+.seeRecipes p {
   font-size: 1rem;
   color: #ffffff;
   align-self: center;
@@ -471,7 +518,8 @@ h1 {
 
 #addToShoppingCart:hover,
 .checkOut:hover,
-.pay:hover {
+.pay:hover,
+.seeRecipes:hover {
   background-color: #47af69;
   cursor: pointer;
 }
@@ -744,6 +792,10 @@ hr {
   margin: 0 auto;
 }
 
+.paymentDetails input:focus {
+  border: 1px solid #50c878;
+}
+
 .paymentDetails input {
   box-sizing: border-box;
   position: relative;
@@ -792,6 +844,10 @@ hr {
   grid-template-columns: 1fr 1fr;
   height: 4rem;
   row-gap: 0rem;
+}
+
+.billingAddress input:focus {
+  border: 1px solid #50c878;
 }
 
 #street {
