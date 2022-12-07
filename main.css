@@ -136,6 +136,52 @@ button img {
   width: 100%;
 }
 
+.seeRecipes a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.seeRecipes {
+  z-index: 1;
+  width: 30%;
+  background-color: #50c878;
+  height: 3rem;
+  border-radius: 0.5rem;
+  margin-top: 4rem;
+  position: fixed;
+}
+
+.firstPage {
+  display: flex;
+  justify-content: center;
+  margin-top: calc(50vh - 0.5rem);
+}
+
+.headline {
+  width: 50%;
+  margin-top: 10rem;
+  display: block;
+}
+
+.headline h1 {
+  margin-left: calc(50% / 2);
+  font-size: 2rem;
+}
+
+.headline p {
+  font-size: 1rem;
+  color: #000000;
+}
+
+.background img {
+  width: 100vw;
+  height: 60vh;
+  object-fit: cover;
+  position: fixed;
+  top: 4.75rem;
+  left: 0;
+}
 /*#region style meal cards*/
 
 .cards {
@@ -409,13 +455,19 @@ h1 {
   justify-content: center;
 }
 
-#addToShoppingCart p {
+#addToShoppingCart p,
+.checkOut p,
+.pay p,
+.seeRecipes p {
   font-size: 1rem;
   color: #ffffff;
   align-self: center;
 }
 
-#addToShoppingCart:hover {
+#addToShoppingCart:hover,
+.checkOut:hover,
+.pay:hover,
+.seeRecipes:hover {
   background-color: #47af69;
   cursor: pointer;
 }
@@ -438,31 +490,256 @@ footer {
   right: 0;
 }
 
+.cart h1 {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+hr {
+  border: 0.05rem solid #bababa;
+  width: 45rem;
+}
+
+.cartMeal {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+
 
 .text-center {
   display: flex;
   text-align: center;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Inter", sans-serif;
+  margin-top: 4rem;
+  margin-left: calc((23rem - 18rem) / 2);
 }
 
-
-.footer-center h1 {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 2rem;
+.continue {
+  display: flex;
+  position: absolute;
+  background-color: #ffffff;
+  border: solid #bababa 0.1rem;
+  width: 18rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  justify-content: center;
+  margin-left: calc((23rem - 18rem) / 2);
+  margin-top: 8rem;
 }
+
+.continue p {
+  font-size: 1rem;
+  color: #000000;
+  align-self: center;
+}
+
 
 .footer-icons {
   list-style-type: none;
   display: flex;
-  margin: 1rem 0 0;
+  justify-content: center;
+  width: 100vw;
+}
+
+.summaryOrder {
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  max-width: 23rem;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.summaryOrder h1,
+.paymentDetails h1 {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.summaryOrderInfo {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.summaryOrder img {
+  display: inline-block;
+  width: 8rem;
+  height: 4.9rem;
+  border-radius: 1rem;
+  margin-left: 1rem;
+}
+
+.summaryOrder hr {
+  width: 21rem;
+}
+
+.summaryOrderName {
+  display: inline-block;
+}
+
+.money {
+  margin-left: 9.7rem;
+  transform: translateY(-2rem);
+}
+
+.paymentDetails {
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 47rem;
+  height: 40rem;
+}
+
+.paymentDetails form {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 1rem;
+  row-gap: 0.5rem;
+  margin: 0 auto;
+}
+
+.paymentDetails input:focus {
+  border: 1px solid #50c878;
+}
+
+.paymentDetails input {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 2rem;
+  border: 1px solid #bababa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.paymentDetails label {
+  margin-top: 0.5rem;
+}
+
+.paymentDetails .billingAddress input {
+  border: none;
+}
+
+.cardNumber {
+  display: grid;
+  grid-template-columns: 1fr 5rem 5rem;
+}
+
+#number {
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#exDate {
+  border-left: none;
+  border-radius: 0;
+}
+
+#cvc {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+}
+
+.billingAddress {
+  border: 1px solid #bababa;
+  border-radius: 0.5rem;
+  width: 100%;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  height: 4rem;
+  row-gap: 0rem;
+}
+
+.billingAddress input:focus {
+  border: 1px solid #50c878;
+}
+
+#street {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-bottom: 1px solid #bababa;
+  border-radius: 0;
+}
+
+#city {
+  border-right: 1px solid #bababa;
+  border-radius: 0;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+#zipCode {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.cardDetails,
+.billingAddress {
+  display: flex;
+}
+
+.infoText {
+  color: #bababa;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.totalPay {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.payButton {
+  display: flex;
+  justify-content: center;
+}
+
+.pay {
+  display: inline-flex;
+  position: absolute;
+  background-color: #50c878;
+  width: 60%;
+  height: 3rem;
+  border-radius: 0.5rem;
+  margin-top: 4rem;
+  justify-content: center;
   align-items: center;
   justify-content: center;
   padding-top: 12px;
   justify-content: space-evenly;
+}
+
+.successful {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  width: calc(100vw - 6rem);
+  height: 40rem;
+  margin-left: 3rem;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+}
+
+.successful h1 {
+  color: #50c878;
 }
 
 .footer-icons li {
@@ -487,11 +764,191 @@ footer {
   .cards {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    margin-left: 1rem;
+    cursor: pointer;
+  
   }
 
-  .hamburgerMenu {
-    display: block;
+  
+
+  .hamburgerMenu img {
+    width: 1.4rem;
+  }
+
+  #hamburgerMenuOptions {
+    z-index: 5;
+    position: fixed;
+    top: 3.75rem;
+  }
+
+  #hamburgerMenuOptions ul {
+    width: 8rem;
+    background-color: #ffffff;
+    border-bottom-right-radius: 1rem;
+
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  #hamburgerMenuOptions ul li {
+    list-style-type: none;
+    margin: 1rem 0;
+    padding: 0.2rem;
+  }
+
+  #hamburgerMenuOptions ul li a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  #hamburgerMenuOptions ul li a.active {
+    color: #50c878;
+  }
+
+  .shoppingCart {
+    margin-left: calc(100% - 1.4rem - 1rem);
+  }
+
+  #shoppingCartBallMobile {
+    margin-left: calc(33% - 1rem - 0.5rem);
+    transform: translateY(-0.8rem);
+  }
+
+  .swedishBreakfast {
+    width: 95%;
+    margin: 0 2.5%;
+  }
+
+  .swedishBreakfast img {
+    width: 100%;
+  }
+
+  .cardImage {
+    height: calc(100% * 0.62);
+    object-fit: cover;
+  }
+
+  .time img {
+    width: 1.4rem;
+  }
+
+  .reviews img {
+    width: 1.4rem;
+  }
+
+  h1,
+  .swedishBreakfast h1 {
+    font-size: 1.25rem;
+  }
+
+  #details {
+    width: 95%;
+    max-width: none;
+  }
+
+  #image {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+  }
+
+  .howTo {
+    padding-bottom: 5rem;
+  }
+
+  .clock {
+    top: 12.5rem;
+    left: 0.5rem;
+  }
+
+  #close {
+    left: calc(95% - 2rem + 0.5rem);
+    top: 0.5rem;
+  }
+
+  #addToShoppingCart {
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  .shoppingCartSite {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  .cart {
+    width: 100%;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin: 0 calc(100% - 90% - 5%);
+  }
+
+  #cartMealImage {
+    width: 40%;
+    object-fit: cover;
+  }
+
+  .cartMeal {
+    margin: 0;
+    padding: 0;
+  }
+
+  .cartMealMoney {
+    display: none;
+  }
+
+  .cartMealInfo {
+    width: 55%;
+  }
+
+  .cartMealP {
+    margin-top: 0;
+  }
+
+  .cartMealAvailable {
+    margin-top: 0;
+  }
+
+  .total {
+    left: 0;
+    margin: 1.5rem calc(100% - 90% - 5%);
+  }
+
+  .paymentFlex {
+    padding-bottom: 2rem;
+  }
+
+  .payment {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .paymentDetails {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 1rem;
+  }
+
+  .summaryOrder {
+    width: 100%;
+    height: auto;
+    left: 5%;
+  }
+
+  .summaryOrder h1 {
+    margin-top: 0;
+  }
+
+  .successfulPage {
+    height: 40vh;
+  }
+
+  .successful {
+    height: 40vh;
   }
 }
-
-
