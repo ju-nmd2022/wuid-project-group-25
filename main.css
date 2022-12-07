@@ -722,10 +722,6 @@ hr {
   align-self: center;
 }
 
-.continue:hover {
-  background-color: #f8f8f8;
-  cursor: pointer;
-}
 
 .continue p {
   font-size: 1rem;
@@ -1008,102 +1004,10 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
-
-  .firstPage {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-    border-radius: 1rem;
-    margin-top: calc(50vh - 0.75rem);
-  }
-
-  .headline {
-    width: 100%;
-  }
-
-  .headline h1 {
-    margin: 0;
-    text-align: center;
-  }
 }
 
-@media screen and (max-width: 900px) {
-  .topnav {
-    display: none;
-  }
-
-  .mobileNav {
-    display: flex;
-    background-color: #ffffff;
-    position: fixed;
-    width: 100%;
-    height: 4.75rem;
-    flex-direction: row;
-    justify-content: space-between;
-    box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
-    z-index: 4;
-    overflow: hidden;
-  }
-
-  .mobileNav ul {
-    display: flex;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-  }
-
-  .mobileNav li {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    width: 33%;
-    height: 4.75rem;
-  }
-
-  .mobileNav ul li .logo {
-    margin: 0 auto;
-  }
-
-  .hamburgerMenu img {
-    display: block;
-    width: 1.4rem;
-    margin-left: 1rem;
-    cursor: pointer;
-  }
-
-  #hamburgerMenuOptions {
-    z-index: 5;
-    position: fixed;
-    top: 3.75rem;
-  }
-
-  #hamburgerMenuOptions ul {
-    width: 8rem;
-    background-color: #ffffff;
-    border-bottom-right-radius: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
-  }
-
-  #hamburgerMenuOptions ul li {
-    list-style-type: none;
-    margin: 1rem 0;
-    padding: 0.2rem;
-  }
-
-  #hamburgerMenuOptions ul li a {
-    text-decoration: none;
-    color: #000000;
-  }
-
-  #hamburgerMenuOptions ul li a.active {
-    color: #50c878;
-  }
-
-  .firstPage {
+@media screen and (min-width: 501px) and (max-width: 900px) {
+  .cards {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     width: 100%;
@@ -1253,18 +1157,121 @@ footer {
     margin-top: 1rem;
   }
 
-  .payButton {
+  .payment {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .paymentDetails {
+    width: 90%;
+    margin-left: 5%;
     margin-top: 1rem;
   }
 
   .summaryOrder {
     width: 100%;
     height: auto;
+    left: 5%;
+  }
+
+  .summaryOrder h1 {
+    margin-top: 0;
   }
 
   .successfulPage {
     height: 40vh;
   }
+
+  .successful {
+    height: 40vh;
+  }
+
+
+body {
+  color: #90e0ef;
+  font-size: 30px;
+  text-align: center;
+}
+
+.topnav {
+background-color: #ffffff;
+position: fixed;
+display: flex;
+width: 100vw;
+height: 10rem;
+margin: 0;
+flex-direction: row;
+justify-content: end;
+box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+z-index: 4;
+overflow: hidden;
+justify-content: left;
+padding-left: 4rem;
+padding-top: 1rem;
+}
+
+/* 
+ The code for positioning the image on top of the other was influenced by https://www.tutorialrepublic.com/faq/how-to-overlay-one-div-over-another-div-using-css.php#:~:text=You%20can%20use%20the%20CSS,%2C%20fixed%20%2C%20or%20relative%20). */
+
+.gridContainer {
+  display: inline-block;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+  margin: 0;
+  padding: 0;
+} 
+
+#box2 {
+  display: inline-block;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+  padding-right: 18rem;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 20px;
+  
+ 
+} 
+
+.cow {
+  width: 100%;
+  height: 100%;            
+  top: 15rem;
+  left: 12rem;
+  position: absolute;
+  position: top;
+  position: left;
+  animation: jump 0.6s linear infinite alternate;
+  
+} 
+
+@keyframes jump {
+  0% {transform: translateY(0px); }
+  50% {transform: translateY(-10px); }
+  100% {transform: translateY(0px); }
+}
+
+  .successfulPage {
+    height: 40vh;
+  }
+.confetti {
+  z-index: 9;
+  padding-right: 12rem;
+  animation-name: animated-confetti;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count: 3;
+  animation-fill-mode: forwards;
+
+}
 
   .successful {
     height: 40vh;
