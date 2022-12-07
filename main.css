@@ -86,10 +86,11 @@ h1 {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   list-style: none;
+  text-decoration: underline;
 }
 
-.topnav a:hover {
-  text-decoration: underline;
+.topnav ul li a:hover {
+  color: #50c878;
 }
 
 .topnav ul .shoppingCartParent {
@@ -186,7 +187,7 @@ input:focus {
   display: inline-flex;
   flex-direction: row;
   width: 13rem;
-  background-color: #f8f8f8;
+  background-color: #edecec;
   border-radius: 0.25rem;
   padding: 0.5rem;
   margin-left: 3rem;
@@ -1132,7 +1133,7 @@ footer {
   }
 
   #hamburgerMenuOptions ul li a {
-    text-decoration: none;
+    text-decoration: underline;
     color: #000000;
   }
 
