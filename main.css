@@ -9,12 +9,50 @@ body {
 .container {
   display: grid;
   grid-template-columns: 5% 90% 5%;
-  grid-template-rows: 4.75rem 1fr 2.25rem;
+  grid-template-rows: 4.75rem 1fr 4.75rem;
   grid-template-areas:
     "header header header"
     ". content ."
     "footer footer footer";
   min-height: 100vh;
+  row-gap: 2rem;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #000000;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: #000000;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+#addToShoppingCart p,
+.checkOut p,
+.pay p,
+.seeRecipes p {
+  font-size: 1rem;
+  color: #ffffff;
+  align-self: center;
+}
+
+#addToShoppingCart:hover,
+.checkOut:hover,
+.payButton:hover,
+.seeRecipes:hover {
+  background-color: #47af69;
+  cursor: pointer;
 }
 
 /*#region header + nav bar*/
@@ -159,10 +197,6 @@ input:focus {
   display: none;
 }
 
-.invisible {
-  visibility: hidden;
-}
-
 button {
   width: 2rem;
   box-sizing: border-box;
@@ -182,42 +216,28 @@ button img {
   transition: 200ms;
 }
 
-.swedishBreakfast:hover {
-  transform: scale(1.1);
-  transition: 200ms;
-}
-
-.cardImage {
-  height: calc(22rem * 0.62);
-  object-fit: cover;
-}
-
-.seeRecipes a {
+/*#region landing page*/
+.seeRecipes {
   text-decoration: none;
   color: #ffffff;
   font-size: 1rem;
-}
-
-.seeRecipes {
-  z-index: 1;
   width: 30%;
+  text-align: center;
+  z-index: 1;
+  max-width: 20rem;
   background-color: #50c878;
-  height: 3rem;
+  padding: 1rem 0;
   border-radius: 0.5rem;
-  margin-top: 4rem;
-  position: fixed;
+  position: absolute;
+  transform: translateY(-3.75rem);
 }
 
 .firstPage {
+  z-index: 2;
+  background-color: #f8f8f8;
   display: flex;
   justify-content: center;
-  margin-top: calc(50vh - 0.5rem);
-}
-
-.headline {
-  width: 50%;
-  margin-top: 10rem;
-  display: block;
+  margin-top: 50vh;
 }
 
 .headline h1 {
@@ -232,20 +252,37 @@ button img {
 
 .background img {
   width: 100vw;
-  height: 60vh;
+  height: 50vh;
   object-fit: cover;
   position: fixed;
   top: 4.75rem;
   left: 0;
 }
-/*#region style meal cards*/
+
+.headline {
+  width: 50%;
+  display: block;
+}
+
+/*#endregion*/
+
+/*#region recipe page*/
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 3rem;
-  margin-top: 5rem;
+}
+
+.swedishBreakfast:hover {
+  transform: scale(1.1);
+  transition: 200ms;
+}
+
+.cardImage {
+  height: calc(22rem * 0.62);
+  object-fit: cover;
 }
 
 .swedishBreakfast {
@@ -258,6 +295,7 @@ button img {
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   cursor: pointer;
+  transition: 200ms;
 }
 
 .swedishBreakfast img {
@@ -349,16 +387,6 @@ button img {
   margin-right: 0.75rem;
 }
 
-h2 {
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  color: #000000;
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
-}
-
 .detailsBackground {
   position: fixed;
   top: 0;
@@ -383,7 +411,6 @@ h2 {
   z-index: 3;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  height: calc(40rem * 0.62);
   object-fit: cover;
 }
 
@@ -391,6 +418,8 @@ h2 {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   width: 40rem;
+  height: calc(40rem * 0.62);
+  object-fit: cover;
 }
 
 .clock {
@@ -427,16 +456,6 @@ h2 {
   padding: 0 0.5rem;
   width: calc(8rem - 1.4rem - 0.5rem);
   text-align: center;
-}
-
-h1 {
-  font-family: "Inter", sans-serif;
-  font-size: 1.5rem;
-  color: #000000;
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
 }
 
 #close {
@@ -512,49 +531,51 @@ h1 {
   justify-content: center;
 }
 
-#addToShoppingCart p,
-.checkOut p,
-.pay p,
-.seeRecipes p {
-  font-size: 1rem;
-  color: #ffffff;
-  align-self: center;
-}
-
-#addToShoppingCart:hover,
-.checkOut:hover,
-.pay:hover,
-.seeRecipes:hover {
-  background-color: #47af69;
-  cursor: pointer;
-}
-
 /*#endregion*/
 
-/* The following code was influenced by https://www.youtube.com/watch?v=zdA3qZNH1vc Created on: 02/12/2022 */
+/*#region shopping cart page*/
 
-footer {
+.shoppingCartSite {
+  grid-area: content;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 23rem;
+  max-width: 70rem;
+  column-gap: 2rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+#shoppingCartBall,
+#shoppingCartBallMobile {
+  display: flex;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: #50c878;
   position: absolute;
-  position: fixed;
-  height: auto;
-  width: 100vw;
-  font-family: "Inter", sans-serif;
-  padding-top: 40px;
-  color: grey;
-  background: #e5e5e5;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  margin-left: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-0.6rem);
+}
+
+.cart {
+  position: relative;
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
 }
 
 .cart h1 {
   margin-left: 1rem;
-  margin-top: 1rem;
+  padding-top: 0.75rem;
 }
 
 hr {
   border: 0.05rem solid #bababa;
-  width: 45rem;
+  width: calc(100% - 2rem);
 }
 
 .cartMeal {
@@ -563,14 +584,6 @@ hr {
   justify-content: space-evenly;
   align-items: center;
   margin: 1rem 0;
-}
-
-.text-center {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  margin-top: 4rem;
-  margin-left: calc((23rem - 18rem) / 2);
 }
 
 .continue {
@@ -586,17 +599,152 @@ hr {
   margin-top: 8rem;
 }
 
+.cartMealInfo {
+  position: relative;
+  width: calc(100% - 12rem - 3rem);
+}
+
+#cartMealImage {
+  width: 12rem;
+  border-radius: 1rem;
+  height: 7.5rem;
+}
+
+.cartMealName {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.cartMealMoney {
+  display: inline-block;
+  margin-left: 7.9rem;
+}
+
+.cartMealP {
+  display: inline-block;
+  color: #bababa;
+  margin-left: 1rem;
+}
+
+.cartMealAvailable {
+  display: inline-block;
+  color: #50c878;
+  margin-left: 1rem;
+}
+
+.cartMealSmallInfo {
+  position: relative;
+}
+
+.amountDelete {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addRemove {
+  width: 1rem;
+  fill: #bababa;
+}
+
+#remove,
+#add {
+  width: 0.6rem;
+}
+
+.delete {
+  display: flex;
+  width: 5rem;
+  margin-right: 1rem;
+}
+
+.trash {
+  width: 1.2rem;
+}
+
+.trashP {
+  color: #bababa;
+  margin-left: 0.5rem;
+}
+
+.amountCard {
+  display: flex;
+  border: 0.05rem solid #bababa;
+  width: 5rem;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 1rem;
+}
+
+.amount {
+  display: inline-block;
+  width: 2rem;
+  text-align: center;
+  margin: 0;
+}
+
+.total {
+  position: relative;
+  background-color: #ffffff;
+  width: 23rem;
+  height: 16rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+}
+
+.totalAmount {
+  display: inline-block;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  width: 3rem;
+}
+
+.totalDollars {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-left: 14rem;
+}
+
+.checkOut {
+  display: flex;
+  position: absolute;
+  background-color: #50c878;
+  width: 18rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-left: calc((23rem - 18rem) / 2);
+  align-self: center;
+}
+
+.continue:hover {
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
 .continue p {
   font-size: 1rem;
   color: #000000;
   align-self: center;
 }
+/*#endregion*/
 
-.footer-icons {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  width: 100vw;
+/*#region payment page*/
+
+.payment {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: calc(47rem + 23rem + 1rem);
+  width: 100%;
+  margin-top: 1rem !important;
+  column-gap: 2rem;
+  margin: 0 auto;
 }
 
 .summaryOrder {
@@ -606,12 +754,12 @@ hr {
   border-radius: 1rem;
   max-width: 23rem;
   width: 100%;
-  padding: 1rem 0;
+  box-sizing: border-box;
 }
 
 .summaryOrder h1,
 .paymentDetails h1 {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   margin-left: 1rem;
 }
 
@@ -637,7 +785,7 @@ hr {
 }
 
 .money {
-  margin-left: 9.7rem;
+  margin-left: 9rem;
   transform: translateY(-2rem);
 }
 
@@ -648,7 +796,8 @@ hr {
   border-radius: 1rem;
   width: 100%;
   max-width: 47rem;
-  height: 40rem;
+  box-sizing: border-box;
+  padding-bottom: 2rem;
 }
 
 .paymentDetails form {
@@ -705,10 +854,10 @@ hr {
 }
 
 .billingAddress {
+  display: grid !important;
   border: 1px solid #bababa;
   border-radius: 0.5rem;
   width: 100%;
-  display: grid !important;
   grid-template-columns: 1fr 1fr;
   height: 4rem;
   row-gap: 0rem;
@@ -760,21 +909,25 @@ hr {
 .payButton {
   display: flex;
   justify-content: center;
-}
-
-.pay {
-  display: inline-flex;
-  position: absolute;
+  align-items: center;
+  height: 3rem;
   background-color: #50c878;
   width: 60%;
-  height: 3rem;
   border-radius: 0.5rem;
-  margin-top: 4rem;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
-  padding-top: 12px;
-  justify-content: space-evenly;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 auto;
+  margin-top: 0.75rem;
+}
+
+/*#endregion*/
+
+/*#region successful page*/
+.successfulPage {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100vw;
+  height: 100vh;
 }
 
 .successful {
@@ -796,34 +949,129 @@ hr {
   color: #50c878;
 }
 
-.footer-icons li {
-  margin: 0 6px;
+/*#endregion*/
+
+/*#region footer*/
+
+.text-center {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  max-width: 12rem;
+  text-align: center;
+  justify-content: center;
+  row-gap: 0.5rem;
 }
+
+.text-center a img {
+  width: 100%;
+  height: 100%;
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+}
+
+.text-center a {
+  filter: grayscale(90%);
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.text-center a:hover {
+  filter: grayscale(0);
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.text-center h1 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  margin: 0;
+}
+
+/* The following code was influenced by https://www.youtube.com/watch?v=zdA3qZNH1vc Created on: 02/12/2022 */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: footer;
+  height: 4.75rem;
+  width: 100vw;
+  background-color: #ffffff;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.05);
+}
+
+/*#endregion*/
 
 @media screen and (min-width: 901px) and (max-width: 1300px) {
   .cards {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
-}
 
-@media screen and (min-width: 501px) and (max-width: 900px) {
-  .cards {
+  .firstPage {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    margin-top: calc(50vh - 0.75rem);
+  }
+
+  .headline {
+    width: 100%;
+  }
+
+  .headline h1 {
+    margin: 0;
+    text-align: center;
   }
 }
 
-@media screen and (max-width: 500px) {
-  .cards {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    margin-left: 1rem;
-    cursor: pointer;
+@media screen and (max-width: 900px) {
+  .topnav {
+    display: none;
+  }
+
+  .mobileNav {
+    display: flex;
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    height: 4.75rem;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+    z-index: 4;
+    overflow: hidden;
+  }
+
+  .mobileNav ul {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+
+  .mobileNav li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 33%;
+    height: 4.75rem;
+  }
+
+  .mobileNav ul li .logo {
+    margin: 0 auto;
   }
 
   .hamburgerMenu img {
+    display: block;
     width: 1.4rem;
+    margin-left: 1rem;
+    cursor: pointer;
   }
 
   #hamburgerMenuOptions {
@@ -836,7 +1084,6 @@ hr {
     width: 8rem;
     background-color: #ffffff;
     border-bottom-right-radius: 1rem;
-
     padding-top: 1rem;
     padding-bottom: 1.5rem;
   }
@@ -856,6 +1103,24 @@ hr {
     color: #50c878;
   }
 
+  .firstPage {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    margin-top: calc(50vh - 0.75rem);
+  }
+
+  .headline {
+    width: 100%;
+  }
+
+  .headline h1 {
+    margin: 0;
+  }
+
   .shoppingCart {
     margin-left: calc(100% - 1.4rem - 1rem);
   }
@@ -863,6 +1128,12 @@ hr {
   #shoppingCartBallMobile {
     margin-left: calc(33% - 1rem - 0.5rem);
     transform: translateY(-0.8rem);
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    cursor: pointer;
   }
 
   .swedishBreakfast {
@@ -922,11 +1193,6 @@ hr {
     margin-left: 20%;
   }
 
-  .shoppingCartSite {
-    width: 100%;
-    grid-template-columns: 1fr;
-  }
-
   hr {
     width: 100%;
   }
@@ -936,7 +1202,11 @@ hr {
     height: auto;
     left: 0;
     right: 0;
-    margin: 0 calc(100% - 90% - 5%);
+    margin: 0;
+  }
+
+  .shoppingCartSite {
+    grid-template-columns: 1fr;
   }
 
   #cartMealImage {
@@ -966,8 +1236,7 @@ hr {
   }
 
   .total {
-    left: 0;
-    margin: 1.5rem calc(100% - 90% - 5%);
+    margin: 1.5rem 0;
   }
 
   .paymentFlex {
@@ -980,19 +1249,17 @@ hr {
   }
 
   .paymentDetails {
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .payButton {
     margin-top: 1rem;
   }
 
   .summaryOrder {
     width: 100%;
     height: auto;
-    left: 5%;
-  }
-
-  .summaryOrder h1 {
-    margin-top: 0;
   }
 
   .successfulPage {
