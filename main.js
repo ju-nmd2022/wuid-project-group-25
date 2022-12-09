@@ -374,6 +374,7 @@ let meal12 = {
 
 const cards = document.getElementById("cards");
 const searchInput = document.getElementById("searchInput");
+const searchInputMobile = document.getElementById("searchInputMobile");
 
 const details = document.getElementById("details");
 const detailsBackground = document.getElementById("detailsBackground");
@@ -524,6 +525,20 @@ if (searchInput != null) {
     const searchQuery = value.toLowerCase();
 
     // If three letters or more is written - a meal will appear on the screen. If not, all meals will be shown, this is also for when you remove letters.
+    if (searchQuery.length >= SEARCH_MINIMUM_CHAR_COUNT) {
+      listOfMeals.forEach((meal) => doesMealMatchSearch(meal, searchQuery));
+    } else {
+      listOfMeals.forEach((meal) => showMeal(meal));
+    }
+  });
+}
+
+if (searchInputMobile != null) {
+  searchInputMobile.addEventListener("keyup", (event) => {
+    const { value } = event.target;
+
+    const searchQuery = value.toLowerCase();
+
     if (searchQuery.length >= SEARCH_MINIMUM_CHAR_COUNT) {
       listOfMeals.forEach((meal) => doesMealMatchSearch(meal, searchQuery));
     } else {
