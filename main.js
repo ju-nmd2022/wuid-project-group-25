@@ -740,3 +740,26 @@ function updateSummary() {
     }
   }
 }
+
+//  the folowing lines were adapted from https://www.youtube.com/watch?v=mrVkYzMX%20s1s 
+
+function changeColor(obj) {
+
+  if (obj.style.color == "lightblue") {
+      obj.style.color = "black";
+  } else {
+      obj.style.color = "lightblue";
+  }
+}
+
+function showText() {
+  let element = document.getElementById("FAQ");
+
+  if (element.style.display == "none") {
+      element.style.display = "block";
+
+  } else {
+      element.style.display = "none";
+  }
+}
+ 

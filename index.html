@@ -9,7 +9,6 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
     </style>
-    <script src="main.js" defer></script>
   </head>
   <body>
     <main class="container">
@@ -40,7 +39,21 @@
               <a>How</a>
             </li>
             <li>
-              <a>Get help</a>
+              <a class="getHelp" href="newpage.html">Get help</a>
+              <div class="container">
+                <h1>Get Help</h1>
+                <!-- the folowing lines were adapted from https://www.youtube.com/watch?v=mrVkYzMX%20s1s -->
+                <ul>
+                    <li onmouseover = "showText()" onmouseout = "showText">FAQs</li>
+                    <li id="FAQ" style="display: none;">
+                        <p>1. Are the products fresh?</p>
+                        <p>2. Do you offer discounts? Can I use more than one voucher?</p>
+                        <p>3. Do you have monthly subscription? Or yealry?</p></li>
+                    <li onmouseover="changeColor(this)" onmouseout="changeColor(this)">Customer Service Support</li>
+                    <li onmouseover="changeColor(this)" onmouseout="changeColor(this)">Feedback</li>
+                    <li onmouseover="changeColor(this)" onmouseout="changeColor(this)">Your Account</li>
+                    <li onmouseover="changeColor(this)" onmouseout="changeColor(this)">Settings</li>
+                </ul>
             </li>
             <li class="shoppingCartParent">
               <div id="shoppingCartBall">
@@ -133,5 +146,6 @@
         </div>
      </footer>
     </main>
+    <script src="main.js" defer></script>
   </body>
 </html>
