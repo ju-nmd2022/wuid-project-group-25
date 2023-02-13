@@ -22,12 +22,6 @@
                 alt="A logo containing a kitchen hat, a fork, a knife and the company name Cuisines with Culture"
               />
             </a>
-            <div id="search">
-              <input id="searchInput" type="text" placeholder="Search" />
-              <button type="submit">
-                <img src="icons/search.svg" alt="A magnifying glass" />
-              </button>
-            </div>
           </div>
           <ul class="navBar">
             <li>
@@ -37,7 +31,7 @@
             </li>
 
             <li>
-              <a class="active" href="recipe.html">Recipes </a>
+              <a href="recipe.html">Recipes </a>
             </li>
             <li>
               <a>How</a>
@@ -46,7 +40,7 @@
               <a>Get help</a>
             </li>
             <li class="shoppingCartParent">
-              <div id="shoppingCartBall">
+              <div class="shoppingCartAnimation" id="shoppingCartBall">
                 <p id="shoppingCartText">5</p>
               </div>
               <a class="shoppingCart" href="shoppingCart.html"
@@ -74,7 +68,10 @@
           </li>
 
           <li class="shoppingCartParent">
-            <div id="shoppingCartBallMobile">
+            <div
+              class="shoppingCartMobileAnimation"
+              id="shoppingCartBallMobile"
+            >
               <p id="shoppingCartTextMobile">5</p>
             </div>
             <a class="shoppingCart" href="shoppingCart.html"
@@ -87,7 +84,7 @@
       <div id="hamburgerMenuOptions">
         <ul>
           <li>
-            <a class="active" href="recipe.html">Recipes </a>
+            <a href="recipe.html">Recipes </a>
           </li>
           <li>
             <a>How</a>
@@ -97,72 +94,77 @@
           </li>
         </ul>
       </div>
-      <div class="paymentFlex">
-        <div class="payment">
-          <div class="paymentPage">
-            <div class="summaryOrder">
-              <h1>Summary Order</h1>
-              <hr />
-              <div id="summaryOrderInfo" class="summaryOrderInfo">
-                <img
-                  id="summaryOrderImage"
-                  src="images/potatoPancakes.jpeg"
-                  alt=""
-                />
-                <h2 id="summaryOrderName" class="summaryOrderName">
-                  Potato pancakes with lingonberries
-                </h2>
-              </div>
-              <h2 id="summaryOrderMoney" class="money">$10</h2>
-              <hr />
-            </div>
-          </div>
-          <div class="paymentDetails">
-            <h1>Payment Details</h1>
-            <p class="infoText">
-              Complete your purchase by providing your payment details.
-            </p>
-            <form action="submit">
-              <label for="emailAddress">Email Address</label>
-              <input
-                type="email"
-                placeholder="annanadersson@hotmail.com"
-                id="emailAddress"
-              />
-              <label for="cardNumber">Card Number</label>
-              <div class="cardNumber">
-                <input type="text" placeholder="Card Number" id="number" />
-                <input type="text" placeholder="MM / YY" id="exDate" />
-                <input type="text" placeholder="CVC" id="cvc" />
-              </div>
 
-              <label for="cardHolder">Card Holder</label>
-              <input
-                type="text"
-                placeholder="First and Last Name"
-                id="cardHolder"
-              />
-
-              <label for="billingAddress">Billing Address</label>
-              <div class="billingAddress">
-                <input type="text" placeholder="Street" id="street" />
-                <input type="text" placeholder="City" id="city" />
-                <input type="text" placeholder="Zip Code" id="zipCode" />
-              </div>
-            </form>
-            <div class="totalPay">
-              <h2 class="totalPayment">Total:</h2>
-              <h2 id="totalPrice" class="totalPaymentDollar">$20</h2>
-            </div>
-            <a class="payButton" href="successful.html">
-              <button type="button" class="pay">
-                <p id="payTotalPrice">Pay $20</p>
-              </button></a
-            >
+      <div class="payment">
+        <div class="summaryOrder">
+          <h1>Summary Order</h1>
+          <hr />
+          <div id="summaryOrderInfo" class="summaryOrderInfo">
+            <img
+              id="summaryOrderImage"
+              src="images/potatoPancakes.jpeg"
+              alt=""
+            />
+            <h2 id="summaryOrderName" class="summaryOrderName">
+              Potato pancakes with lingonberries
+            </h2>
           </div>
+          <h2 id="summaryOrderMoney" class="money"></h2>
+          <hr />
+        </div>
+
+        <div class="paymentDetails">
+          <h1>Payment Details</h1>
+          <p class="infoText">
+            Complete your purchase by providing your payment details.
+          </p>
+          <form action="submit">
+            <label for="emailAddress">Email Address</label>
+            <input
+              type="email"
+              placeholder="annanadersson@hotmail.com"
+              id="emailAddress"
+            />
+            <label for="cardNumber">Card Number</label>
+            <div class="cardNumber">
+              <input type="text" placeholder="Card Number" id="number" />
+              <input type="text" placeholder="MM / YY" id="exDate" />
+              <input type="text" placeholder="CVC" id="cvc" />
+            </div>
+
+            <label for="cardHolder">Card Holder</label>
+            <input
+              type="text"
+              placeholder="First and Last Name"
+              id="cardHolder"
+            />
+
+            <label for="billingAddress">Billing Address</label>
+            <div class="billingAddress">
+              <input type="text" placeholder="Street" id="street" />
+              <input type="text" placeholder="City" id="city" />
+              <input type="text" placeholder="Zip Code" id="zipCode" />
+            </div>
+          </form>
+          <div class="totalPay">
+            <h2 class="totalPayment">Total:</h2>
+            <h2 id="totalPrice" class="totalPaymentDollar"></h2>
+          </div>
+          <a class="payButton" href="successful.html">
+            <p id="payTotalPrice"></p
+          ></a>
         </div>
       </div>
-      <footer class="flexbox"></footer>
+
+      <footer>
+        <div class="text-center">
+          <h1>Contact Us</h1>
+          <a href="#"><img src="icons/mail.svg" alt="email" /></a>
+          <a href="#"><img src="icons/facebook.svg" alt="facebook" /></a>
+          <a href="#"><img src="icons/instagram.svg" alt="instagram" /></a>
+          <a href="#"><img src="icons/twitter.svg" alt="twitter" /></a>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
