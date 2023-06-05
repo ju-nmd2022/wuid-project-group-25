@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Page</title>
+    <link rel="stylesheet" href="next.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+      </style>
+</head>
+<body>
+    <main class="container">
+        <div class="header">
+           <nav class="topnav">
+            <div class="search">
+              <a class="logo">
+                <img
+                  src="images/logo.png"
+                  alt="A logo containing a kitchen hat, a fork, a knife and the company name Cuisines with Culture"/>
+              </a>
+            </div>
+             <ul class="navBar">          
+                <a>Recipes </a>
+              </li>
+              <li>
+                <a>How</a>
+              </li>
+              <li>
+                <a>Get help</a>
+              </li>
+              <li class="shoppingCartParent">
+                <a class="shoppingCart" href="shoppingCart.html">    
+                </a><img src="icons/shoppingcart.svg" alt="Shopping Cart"/></a>
+              <li>
+             </ul>
+          </nav>
+        </div>
+        <div class="gridContainer">
+            <div class="box" id="box">
+              <h1>Write a review</h1>
+              <div class="row">
+                <input type="text" id="text-box" placeholder="Enter your text here...">
+                <button onclick="addTask()">Submit</button>
+            </div>
+            <ul id="list-container">
+                <!-- <li class="checked"><div class="stars"></div></li>
+                <li></li>
+                <li>Task3</li> -->
+            </ul>
+        </div>  
+    </main>
+    <footer>
+       <div class="text-center">
+         <h1>Contact Us</h1>
+         <a href="#"><img src="icons/mail.svg" alt="email" /></a>
+         <a href="#"><img src="icons/facebook.svg" alt="facebook" /></a>
+         <a href="#"><img src="icons/instagram.svg" alt="instagram" /></a>
+         <a href="#"><img src="icons/twitter.svg" alt="twitter" /></a>
+      </div>
+    </footer>
+   </main>
+   <script src="next.js"></script>
+    
+</body>
+</html>
+

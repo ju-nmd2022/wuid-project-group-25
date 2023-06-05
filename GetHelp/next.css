@@ -19,7 +19,7 @@ body {
       "header header header"
       ". content ."
       "footer footer footer";
-  min-height: 100vh;
+  min-height: 150vh;
   row-gap: 2rem;
 }
 
@@ -55,17 +55,33 @@ a:-webkit-any-link {
   height: 4.75rem;
   padding: 0.25rem 0;
   padding-top: 0.25rem;
-    padding-right: 0px;
-    padding-bottom: 0.25rem;
-    padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0.25rem;
+  padding-left: 0px;
   box-sizing: border-box;
 }
 
-img {
-  overflow-clip-margin: content-box;
-    overflow: clip;
+
+.box h1{
+  color: grey;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #dbdbdb;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 1010px;
+}
 
 .topnav ul li a {
   text-decoration: none;
@@ -102,7 +118,6 @@ ul {
   padding: 0;
   margin-right: 2rem;
 }
-
 
 
 
@@ -148,7 +163,6 @@ ul {
 }
 
 
-
 .topnav ul li {
   text-align: center;
   align-self: center;
@@ -157,22 +171,32 @@ ul {
   margin: 0 1rem;
 }
 
-input,
-button {
-  background: none;
-  border: none;
-}
+
 
 input {
   font-family: "Inter", sans-serif;
   font-size: 0.75rem;
   width: 10rem;
   color: #999999;
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  padding-top: 25px;
 }
 
-input:focus {
+button {
+  padding: 10px 20px;
+  border: none;
   outline: none;
-  color: #000000;
+  background: rgb(132, 129, 129);
+  color: #f5efff;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 12px;
+  margin-right: 10px;
 }
 
 .gridContainer {
@@ -188,14 +212,12 @@ input:focus {
 }
 
 
-ul li, p {
+ul li, p span {
   color: #000000;
   font-family: "Inter", sans-serif;
   font-size: 1.2rem;
   list-style-type: none;
 }
-
-
 
 
 li {
@@ -219,6 +241,29 @@ ul :hover {
 #FAQ :hover {
     color: #90be6d;
 }
+
+ul li{
+  list-style: none;
+  font-size: 15px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+
+ul li span{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
 
 .text-center {
   display: grid;
@@ -301,5 +346,8 @@ footer {
   background-color: #ffffff;
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.05);
 }
+
+
+
 
 /*#endregion*/
