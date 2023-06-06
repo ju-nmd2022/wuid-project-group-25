@@ -192,29 +192,18 @@ ul li, p {
   color: #000000;
   font-family: "Inter", sans-serif;
   font-size: 1.2rem;
-<<<<<<< HEAD
+
   list-style-type: none;
 }
 
 
 
-
-=======
-  list-style: none;
-}
-
-
->>>>>>> b5dde06facd81a68407d5d4bfa2465a426db7039
 li {
     font-size: 15px;
     margin-top: 25px;
     padding: 15px;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b5dde06facd81a68407d5d4bfa2465a426db7039
 h1 {
     font-size: 30px;
     margin-left: 1cm;
