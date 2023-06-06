@@ -1,0 +1,240 @@
+body{
+    background-color: #f8f7ff;
+}
+
+
+
+.flexbox-container{
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.flexbox-item {
+    width: 1000px;
+   
+    background-color: blue;
+
+}
+.flexbox-item-1 {
+     height: 650px;
+
+}
+img{
+    width: 900px;
+    height: 500px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+a, a:hover{
+    text-decoration: none;
+}
+
+nav{
+    background-color: #f2e9e4;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+}
+
+nav a{
+    color:black;
+
+}
+
+nav a:hover{
+    color: green;
+}
+
+.logo{
+    flex:10;
+    display: block;
+
+}
+
+
+
+.logo img{
+    width: 100px;
+    
+    
+
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.menu li{
+    padding: 15px 10px;
+    font-size: 17px;
+}
+
+
+button{
+     position: absolute;
+     top:35%;left:35%;
+     
+     font-size: 2rem;
+     background-color: rgba(0, 0, 0, 0.3);
+     color:white;
+     border: none;
+     border-radius: 10px;
+     cursor: pointer;
+     padding: 5rem 2rem;
+     transition: all .3s ease-in-out;
+}
+
+.modal{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top:0%;
+    left:0%;
+    transform: translate(-0% -0%);
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    
+    
+    }
+.modal--hidden{
+    display: none;
+}
+
+p{
+    font-size: 1.5rem;
+    font-style: italic;
+    align-items:center;
+}
+
+form{
+   font-size: 1rem;
+   align-content: center;
+   
+
+}
+
+
+ .modal__close-bar{
+        display: flex;
+        justify-content: flex-end;
+        
+        cursor: pointer;
+    }
+
+.modal_contents{
+    background-color:#d3f8d3;
+    padding: .5rem;
+    border-radius: 10px;
+    max-width: 35%;
+    
+    }
+
+.carousel{
+    width: 1480px;
+    height: 450px;
+    position: relative;
+    border-radius: 30px;
+
+}
+
+.slide{
+    position: absolute;
+    inset:0;
+    opacity: 0;
+    border-radius: 30px;
+}
+
+.slide >img{
+    display: block;
+    object-fit: scale-down;
+    width: 1480px;
+    height: 450px;
+    object-position: center;
+    border-radius: 30px;
+}
+
+.slide[data-active]{
+    opacity: 1;
+    border-radius: 30px;
+}
+
+.carousel-button{
+
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    color:black;
+    cursor:pointer;
+    border: 5px;
+   
+}
+
+
+
+.carousel-button.prev{
+    top:50%;
+    left:60%;
+}
+.carousel-button.next{
+    top:50%;
+    
+}
+
+
+footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: footer;
+        height: 4.75rem;
+        width: 100vw;
+        background-color: #f2e9e4;
+        transition: all .50s ease;
+}
+    
+footer .social_icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+
+}
+
+footer .social_icon li{
+    list-style: none;
+}
+
+footer .social_icon li a{
+    font-size: 1rem;
+    color: black;
+    margin: 0 10px;
+}
+
+footer .social_icon li a:hover{
+    color: green;
+}
+
+footer h1{
+    align-items: center;
+    font-size: 2rem;
+}
+
+
+
+
+
