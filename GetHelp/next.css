@@ -335,6 +335,11 @@ ul li span{
   margin: 0;
 }
 
+ul li.checked{
+  color: cornflowerblue;
+  text-decoration: underline;
+}
+
 /* The following code was influenced by https://www.youtube.com/watch?v=zdA3qZNH1vc Created on: 02/12/2022 */
 
 footer {
