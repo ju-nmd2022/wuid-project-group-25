@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Next Page</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
     <link rel="stylesheet" href="next.css" />
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
@@ -39,19 +40,93 @@
         </div>
         <div class="gridContainer">
             <div class="box" id="box">
-              <h1>Write a review</h1>
-              <div class="row">
-                <input type="text" id="text-box" placeholder="Enter your text here...">
+              <h1>Rate Us</h1>
+              <form action="#">
+               <div class="rating">
+                <input type="number" name="rating" hidden>
+                <i class='bx bx-star star' style="--i: 0;"></i>
+                <i class='bx bx-star star' style="--i: 1;"></i>
+                <i class='bx bx-star star' style="--i: 2;"></i>
+                <i class='bx bx-star star' style="--i: 3;"></i>
+                <i class='bx bx-star star' style="--i: 4;"></i>
+               </div>
+               <button id="Submit">Rate</button>
+             </form>
+            <div class="row">
+                <input type="text" id="text-box" placeholder="Write a comment here...">
                 <button onclick="addTask()">Submit</button>
             </div>
             <ul id="list-container">
-                <!-- <li class="checked"><div class="stars"></div></li>
-                <li></li>
-                <li>Task3</li> -->
-            </ul>
-        </div>  
+                   </ul>
+                  </div>
+              </div> 
+             <div class="card-holder" id="card-holder"> 
+              <h2>Reviews</h2>    
+               <div class="slide-row">
+                <div class="slide-column">
+                 <div class="text-card">
+                  <!-- Review Card 1 -->
+                 <div class="review">
+                 <h3>Dinos Aphamis</h3>
+                 <h4>1 day ago</h4>
+                 <p>This website is very welll structured and the recipes were very easy to follow. I have tried most of the recipes and I have to say that they are very delicious.</p>
+                  <div class="star">
+                   <img src="icons/starSolid.svg" alt="filledStar"/>
+                  </div>
+                  <div class="star">
+                   <img src="icons/starSolid.svg" alt="filledStar"/>
+                 </div>
+                 <div class="star">
+                   <img src="icons/starSolid.svg" alt="filledStar"/>
+                 </div>
+                 <div class="star">
+                  <img src="icons/starSolid.svg" alt="filledStar"/>
+                </div>
+              </div>
+              <!-- Review Card 2 -->
+              <div class="review">
+                <h3>Jane Smith</h3>
+                <h4>3 months ago</h4>
+              <p>I found the recipes hard to follow. Maybe next time, you can add some videos alongside.</p>
+                <div class="star">
+                  <img src="icons/starSolid.svg" alt="filledStar"/>
+                </div>
+                <div class="star">
+                  <img src="icons/starSolid.svg" alt="filledStar"/>
+                </div>
+              </div>
+      
+              <!-- Review Card 3 -->
+              <div class="review">
+                <h3>John Smith</h3>
+                <h4>3 days ago</h4>
+                <p>Excellent website with a vast collection of delicious recipes. The star rating system is a great addition, and the cooking tips are very helpful.</p>
+                <div class="star">
+                  <img src="icons/starSolid.svg" alt="filledStar"/>
+                </div>
+                <div class="star">
+                  <img src="icons/starSolid.svg" alt="filledStar"/>
+                </div>
+                <div class="star">
+                  <img src="icons/starSolid.svg" alt="filledStar"/>
+                </div>
+                <div class="star">
+                  <img src="icons/starSolid.svg" alt="filledStar"/>
+                </div>
+                <div class="star">
+                  <img src="icons/starSolid.svg" alt="filledStar"/>
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+               
     </main>
-    <footer>
+    <footer>  
        <div class="text-center">
          <h1>Contact Us</h1>
          <a href="#"><img src="icons/mail.svg" alt="email" /></a>
@@ -65,4 +140,7 @@
     
 </body>
 </html>
+
+<!-- Help by: https://www.w3schools.com/howto/howto_css_images_side_by_side.asp -->
+<!-- Help by: https://www.youtube.com/watch?v=lqrsLpcGTes -->
 
